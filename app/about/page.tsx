@@ -14,36 +14,36 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About A-Z Home Improvements',
+  title: 'About FirstChoice Cleaning',
   description:
-    'Meet A-Z Home Improvements in South Croydon. Established in 2002, the team works on extensions, conversions, kitchens, bathrooms and refurbishments.',
+    'Meet Izzy and Bill, founders of FirstChoice Cleaning, and learn about their personal, reliable approach to cleaning.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Established 2002',
-    title: 'Home improvements, built around your vision',
-    description: 'A-Z Home Improvements has been helping customers transform their homes for more than two decades. Nicholas and the team take on projects across South Croydon and South London.',
+    year: 'Meet Our Team',
+    title: 'Izzy & Bill',
+    description: 'At FirstChoice Cleaning, we believe a clean space is more than just appearance — it creates comfort, confidence and peace of mind. We believe the difference comes from the people behind the service, which is why we bring a personal touch. Our journey began with a simple idea: to provide a cleaning service that truly puts people first. We saw many cleaning companies focused only on getting the job done, but we wanted to create something different — a service built on trust, attention to detail, reliability and genuine care for every space we enter. We go the extra mile, treating every home and business as if it were our own. Whether it is a regular clean, a deep clean or a one-off service, we take pride in creating fresh, welcoming spaces while building lasting relationships with our clients.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
-    title: 'Listen and plan',
-    description: 'We discuss what you want to change, walk through the options and agree the project scope with you.',
+    title: 'Listen to your priorities',
+    description: 'We discuss your space, the areas you want cleaned and the result you have in mind.',
   },
   {
-    title: 'Clear Quotes',
-    description: 'We explain the work scope, materials and timing before the job begins.',
+    title: 'Clear, competitive pricing',
+    description: 'We discuss the cleaning scope, price and timing with you before confirming the service.',
   },
   {
-    title: 'Careful workmanship',
-    description: 'We pay attention to the detail across the build and finishing work, with pride in the result.',
+    title: 'Thorough cleaning',
+    description: 'We work with care and attention to detail, leaving your space clean and tidy.',
   },
   {
-    title: 'Keep you informed',
-    description: 'From the quotation to completion, we explain decisions and keep you updated as the project progresses.',
+    title: 'Personal service',
+    description: 'Izzy and Bill bring a friendly, reliable and personal touch to every service.',
   },
 ];
 
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About A-Z Home Improvements
+                  About FirstChoice Cleaning
                 </span>
-                <WordRevealH1 text="Where vision meets reality." />
+                <WordRevealH1 text="A clean space, cared for by people." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Established in 2002, A-Z Home Improvements brings together extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments. Nicholas and the team are known for clear communication, reliability and attention to detail." />
+                  <ScrubbedParagraph text="FirstChoice Cleaning was founded by Izzy and Bill to provide a service built on trust, attention to detail, reliability and genuine care for every space. We treat every home and business as if it were our own." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Established</span>
-                    <span className="font-medium text-forest">2002</span>
+                    <span>Google rating</span>
+                    <span className="font-medium text-forest">5.0 · 12 reviews</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -88,10 +88,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-2xl mb-16">
               <span className="font-body text-13 text-paper/60 uppercase tracking-wider block mb-2 font-medium">
-                Our Experience
+                Our Story
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Our Company
+                People first, every clean
               </h2>
             </div>
           </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe A-Z Home Improvements */}
+      {/* SECTION 4: Equipe FirstChoice Cleaning */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,19 +171,19 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the A-Z Home Improvements Team
+                  Meet Izzy & Bill
                 </h2>
               </div>
               <Link
                 href="/our-team/"
                 className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
               >
-                View Team Details →
+                  Meet the founders →
               </Link>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 justify-items-center gap-10 max-w-md mx-auto">
             {DENTISTS.map((dentist, idx) => (
               <DentistCard key={dentist.id} dentist={dentist} offsetY={idx === 1} />
             ))}
@@ -191,29 +191,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5: Home Improvement Work */}
+      {/* SECTION 5: Cleaning Work */}
       <section className="py-20 md:py-32 border-b border-mist overflow-hidden">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Home Improvement Work
+                  Our Cleaning Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  From Extensions to Complete Refurbishments
+                  Regular, deep and one-off cleaning
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  Customer projects range from kitchen and bathroom updates to garage conversions, extensions and whole-home refurbishments. We take pride in the workmanship, explain our decisions and pay attention to the finish.
+                  Whether it is a regular clean, a deep clean, a one-off service or pressure washing outdoor concrete, we take pride in creating fresh, welcoming spaces. We go the extra mile and care for every home and business we enter.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>The project scope and practical details are discussed before work begins</span>
+                    <span>We agree your priorities and cleaning scope before we begin</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Careful finishing and attention to detail</span>
+                    <span>Friendly, reliable service with attention to detail</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -224,15 +224,15 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
-                      src="/images/jsroof-stock-15.jpg"
-                      alt="Illustrative residential building image"
+                      src="/images/cleaning-detail.jpg"
+                      alt="A freshly cleaned home interior"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Home improvements
+                    Home cleaning
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -259,42 +259,42 @@ export default function AboutPage() {
             <AnimateOnScroll animation="zoom-in" delay={0.1}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-16.jpg"
-                      alt="Illustrative residential homes"
+                  src="/images/cleaning-home.jpg"
+                      alt="Home cleaning"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Residential homes
+                  Regular cleaning
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.2}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-17.jpg"
-                      alt="Illustrative neighbourhood image"
+                  src="/images/cleaning-kitchen.jpg"
+                      alt="Kitchen cleaning"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Neighbourhood homes
+                  Deep cleaning
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.3}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-03.jpg"
-                      alt="Illustrative traditional homes"
+                  src="/images/pressure-washing.jpg"
+                      alt="Pressure washing outdoor concrete"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Traditional homes
+                  Pressure washing
                 </div>
               </div>
             </AnimateOnScroll>
@@ -311,10 +311,10 @@ export default function AboutPage() {
                 Request a Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Tell us about your home improvement plans
+                Tell us about your cleaning plans
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability across Croydon.
+                Call Izzy and Bill to discuss the service you need and check availability.
               </p>
             </div>
           </AnimateOnScroll>

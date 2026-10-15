@@ -12,8 +12,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
   const service = SERVICES.find((item) => item.slug === slug);
   if (!service) return null;
 
-  const photoNumber = Math.max(1, (SERVICES.indexOf(service) + 1) * 2);
-  const photo = `/images/jsroof-stock-${String(photoNumber).padStart(2, '0')}.jpg`;
+  const photo = service.beforeAfterCase.beforeImage;
   const servicePath = `/${service.slug}/`;
   const schema = generateMedicalProcedureSchema(service.name, service.shortDescription, servicePath);
 
@@ -27,7 +26,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
             <div className="lg:col-span-7">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">
-                  A-Z Home Improvements · South Croydon
+                  FirstChoice Cleaning · Home & exterior cleaning
                 </span>
                 <WordRevealH1 text={service.name} />
                 <p className="mt-6 max-w-2xl font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">
@@ -46,9 +45,9 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
             </div>
             <AnimateOnScroll animation="fade-left" duration={0.8} className="lg:col-span-5">
               <div className="relative aspect-[4/3] overflow-hidden border border-mist bg-paper-secondary shadow-sm">
-                <Image src={photo} alt="Residential property reference image" fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover" />
+                <Image src={photo} alt={`${service.name} service`} fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover" />
               </div>
-              <p className="mt-2 font-body text-12 text-forest-light">Illustrative residential imagery</p>
+              <p className="mt-2 font-body text-12 text-forest-light">Cleaning service imagery</p>
             </AnimateOnScroll>
           </div>
         </div>
@@ -57,13 +56,13 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
       <section className="border-b border-mist bg-paper-secondary py-16 md:py-24">
         <div className="mx-auto max-w-site px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
-            <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Your project</span>
-            <h2 className="font-display text-33 text-forest-ink md:text-41">A considered plan for your home</h2>
+            <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Your service</span>
+            <h2 className="font-display text-33 text-forest-ink md:text-41">A careful clean, arranged around you</h2>
             <p className="mt-4 max-w-3xl font-body text-15 leading-relaxed text-forest-ink/80 md:text-17">{service.clinicalExplanation}</p>
           </AnimateOnScroll>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="border border-mist bg-paper p-6 md:p-8">
-              <h3 className="mb-5 font-display text-21 text-forest-ink">Projects we can discuss</h3>
+              <h3 className="mb-5 font-display text-21 text-forest-ink">When this service can help</h3>
               <ul className="space-y-3 font-body text-15 text-forest-ink/80">
                 {service.whoNeeds.map((item) => <li key={item} className="flex gap-3"><span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-greenAccent" />{item}</li>)}
               </ul>
@@ -94,7 +93,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
               </article>
             ))}
           </div>
-          <p className="mt-6 max-w-3xl font-body text-13 leading-relaxed text-forest-light">Quotes and timing depend on the property, selected materials and agreed project scope. The team discusses these details with you before work begins.</p>
+          <p className="mt-6 max-w-3xl font-body text-13 leading-relaxed text-forest-light">Price and timing depend on your property, the areas to be cleaned and the agreed scope. Izzy and Bill will discuss these details with you before confirming the service.</p>
         </div>
       </section>
 
@@ -113,10 +112,10 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
       <section className="bg-forest py-14 text-paper md:py-20">
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
           <div>
-            <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">A-Z Home Improvements · Established 2002</span>
-            <h2 className="font-display text-26 md:text-33">Tell us what you have in mind.</h2>
+            <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">FirstChoice Cleaning · 5.0 Google rating · 12 reviews</span>
+            <h2 className="font-display text-26 md:text-33">Tell us what you would like cleaned.</h2>
           </div>
-          <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-softBlue">Request a quote</Link>
+          <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-softBlue">Request a cleaning quote</Link>
         </div>
       </section>
     </div>

@@ -8,11 +8,11 @@ export default function HomeFeaturedTreatments() {
     <section className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#202A3C] block mb-2 font-medium uppercase tracking-wider">
-            Extensions, Conversions and Refurbishments
+          <span className="font-body text-13 text-[#183454] block mb-2 font-medium uppercase tracking-wider">
+            Our cleaning services
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#202A3C]">
-            Home projects shaped around you
+          <h2 className="font-display text-33 md:text-41 text-[#183454]">
+            Cleaning shaped around your space
           </h2>
         </AnimateOnScroll>
 
@@ -20,30 +20,30 @@ export default function HomeFeaturedTreatments() {
           {/* Featured work: residential improvements */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6 order-2 lg:order-1">
-              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider block mb-2 font-medium">
-                Extensions and additions
+              <span className="font-body text-13 text-[#183454] uppercase tracking-wider block mb-2 font-medium">
+                Regular and deep cleaning
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#202A3C] mb-4">
-                Make room for the way you live
+              <h3 className="font-display text-26 md:text-33 text-[#183454] mb-4">
+                A fresh, comfortable home
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#202A3C]/80 leading-relaxed mb-6">
-                We discuss the way you want the space to work, explain the project scope and plan the details with you.
+              <p className="font-body text-15 md:text-17 text-[#183454]/80 leading-relaxed mb-6">
+                From regular upkeep to a thorough deep clean, we discuss your priorities and focus on the areas that matter to you.
               </p>
-              <div className="p-4 bg-[#F5F8F5] border-l-4 border-[#202A3C] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#202A3C]/80">
-                <strong className="text-[#202A3C] font-semibold">Our approach:</strong> We discuss your plans and agree the work with you before starting.
+              <div className="p-4 bg-[#F3F8FD] border-l-4 border-[#183454] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#183454]/80">
+                <strong className="text-[#183454] font-semibold">Our approach:</strong> Friendly communication and careful attention to detail.
                 </span>
               </div>
-              <Button href="/home-extensions/" variant="ghost" size="md">
-                Explore Extensions
+              <Button href="/regular-house-cleaning/" variant="ghost" size="md">
+                Explore regular cleaning
               </Button>
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6 order-1 lg:order-2">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-06.jpg"
-                  alt="Home improvement reference image"
+                  src="/images/cleaning-home.jpg"
+                  alt="A freshly cleaned home"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-top"
@@ -57,8 +57,8 @@ export default function HomeFeaturedTreatments() {
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-07.jpg"
-                  alt="Residential home reference image"
+                  src="/images/pressure-washing.jpg"
+                  alt="Outdoor pressure washing"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -67,22 +67,22 @@ export default function HomeFeaturedTreatments() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6">
-              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider block mb-2 font-medium">
-                Kitchens and bathrooms
+              <span className="font-body text-13 text-[#183454] uppercase tracking-wider block mb-2 font-medium">
+                One-off cleaning and pressure washing
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#202A3C] mb-4">
-                Refresh the rooms you use every day
+              <h3 className="font-display text-26 md:text-33 text-[#183454] mb-4">
+                A one-off clean when you need it
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#202A3C]/80 leading-relaxed mb-6">
-                From a kitchen redevelopment to a complete bathroom refit, we plan the details and finishing with you.
+              <p className="font-body text-15 md:text-17 text-[#183454]/80 leading-relaxed mb-6">
+                Book a standalone home clean or ask us about pressure washing outdoor concrete. We will agree the details with you first.
               </p>
-              <div className="p-4 bg-[#F5F8F5] border-l-4 border-[#202A3C] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#202A3C]/80">
-                  <strong className="text-[#202A3C] font-semibold">A clear plan:</strong> Agree the scope, materials and timing before work begins.
+              <div className="p-4 bg-[#F3F8FD] border-l-4 border-[#183454] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#183454]/80">
+                  <strong className="text-[#183454] font-semibold">A straightforward service:</strong> Competitive prices and reliable care from start to finish.
                 </span>
               </div>
-              <Button href="/kitchens-bathrooms/" variant="ghost" size="md">
-                Explore Kitchens and Bathrooms
+              <Button href="/one-off-cleaning/" variant="ghost" size="md">
+                Explore one-off cleaning
               </Button>
             </AnimateOnScroll>
           </div>

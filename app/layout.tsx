@@ -8,19 +8,19 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.azhomeimprovements.co.uk'),
+  metadataBase: new URL('https://firstchoiceclean.com.au'),
   title: {
-    default: 'A-Z Home Improvements',
+    default: 'FirstChoice Cleaning',
     template: '%s',
   },
   description:
-    'A-Z Home Improvements delivers extensions, loft and garage conversions, kitchens, bathrooms and home refurbishments in South Croydon. Call +44 7809 835355.',
+    'FirstChoice Cleaning provides regular, deep and one-off house cleaning and outdoor pressure washing. Call +61 480 701 505.',
   keywords: [
-    'A-Z Home Improvements',
-    'home extensions South Croydon',
-    'loft conversions Croydon',
+    'FirstChoice Cleaning',
+    'house cleaning',
+    'pressure washing',
   ],
-  authors: [{ name: 'A-Z Home Improvements' }],
+  authors: [{ name: 'FirstChoice Cleaning' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className="scroll-smooth">
+    <html lang="en-AU" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F8F5] selection:text-[#202A3C]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F3F8FD] selection:text-[#183454]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

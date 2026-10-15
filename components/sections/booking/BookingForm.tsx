@@ -27,7 +27,7 @@ export default function BookingForm() {
     fullName: '',
     phone: '',
     email: '',
-    service: 'home-extensions',
+    service: 'regular-house-cleaning',
     preferredDate: '',
     preferredTime: 'Morning (09:00 – 12:00)',
     notes: '',
@@ -61,7 +61,7 @@ export default function BookingForm() {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate brief technical triage intake
+    setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -75,10 +75,10 @@ export default function BookingForm() {
           Request Received
         </span>
       <h3 className="font-display text-33 md:text-41 text-paper mb-4">
-          Quote request received
+          Request Received
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
-          Thank you, {formData.fullName}. Our team will review your request and contact you at <strong className="text-lime">{formData.phone}</strong> to discuss an assessment.
+          Thank you, {formData.fullName}. Our team will review your cleaning enquiry and contact you at <strong className="text-lime">{formData.phone}</strong> to discuss availability.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
@@ -108,7 +108,7 @@ export default function BookingForm() {
                 fullName: '',
                 phone: '',
                 email: '',
-                service: 'home-extensions',
+                service: 'regular-house-cleaning',
                 preferredDate: '',
                 preferredTime: 'Morning (09:00 – 12:00)',
                 notes: '',
@@ -137,10 +137,10 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request a Home Improvement Quote
+          Request a Cleaning Quote
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Tell us what you would like to improve. Our team will contact you to discuss the project and next steps.
+          Tell us about your space and the cleaning service you need. Our team will contact you to discuss availability and next steps.
         </p>
       </div>
 
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#6B7280] transition-all duration-200">
+          <span className="font-body text-13 text-[#687B91] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -172,7 +172,7 @@ export default function BookingForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="phone" className="font-body text-13 text-forest-ink/70">
-            Telephone Number <span className="text-forest">*</span>
+            Phone Number <span className="text-forest">*</span>
           </label>
           <input
             id="phone"
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+44 7809 835355"
+            placeholder="+61 480 701 505"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#6B7280]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#687B91]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#6B7280]">{errors.email}</span>
+            <span className="font-body text-13 text-[#687B91]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Project Type <span className="text-forest">*</span>
+          Cleaning Service <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,7 +229,7 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Other home improvement project</option>
+          <option value="general-consultation">Other cleaning enquiry</option>
         </select>
       </div>
 
@@ -252,7 +252,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#6B7280]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#687B91]">{errors.preferredDate}</span>
           )}
         </div>
 
@@ -276,14 +276,14 @@ export default function BookingForm() {
       {/* Additional project notes */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="notes" className="font-body text-13 text-forest-ink/70">
-          Tell Us About the Work (Optional)
+          Tell Us About Your Space (Optional)
         </label>
         <textarea
           id="notes"
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Tell us what you would like to change, the rooms involved and any details about your project..."
+          placeholder="Tell us which areas need cleaning and any priorities you have..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>

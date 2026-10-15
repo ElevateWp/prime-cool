@@ -4,18 +4,9 @@ import { Star } from 'lucide-react';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REVIEWS = [
-  {
-    name: 'Joseph Wilde',
-    quote: 'Nicholas was brilliantly communicative and proud of his work. From the quotation to the end of the project he was honest, explained his decisions and kept me updated.',
-  },
-  {
-    name: 'Jane Gunyon',
-    quote: 'I had a full bathroom refit by Nicholas and his team. They were reliable and trustworthy, and we are very pleased with the completed work.',
-  },
-  {
-    name: 'Junesse Dizon',
-    quote: 'Excellent experience from the initial quote to project completion. Nicholas and the team were punctual, well-organised, and communicated clearly throughout.',
-  },
+  { name: 'Sammy G', quote: 'Really happy with the service from FirstChoice Cleaning. They were friendly, professional and very thorough with the work. Booking was easy, they arrived on time and left everything clean and tidy once the job was completed. Great value for money and a reliable team to deal with. Would happily recommend them to others.' },
+  { name: 'Solutions Plumbing', quote: "Highly recommend Izzy and Bill! They did an excellent job pressure washing our outdoor concrete and the difference was incredible. Izzy and Bill were great to deal with, their prices are very competitive, and the whole process was easy from start to finish. Professional, reliable, and I wouldn't hesitate to use them again." },
+  { name: 'Frank Villari', quote: 'Amazing job, went above and beyond my expectations..' },
 ];
 
 export default function HomeReviews() {
@@ -23,40 +14,21 @@ export default function HomeReviews() {
     <section className="w-full bg-paper-secondary py-20 md:py-28 border-t border-mist">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12 text-center">
-          <span className="font-body text-13 text-forest-light block mb-2 font-medium uppercase tracking-wider">
-            Customer feedback
-          </span>
-          <h2 className="font-display text-33 md:text-41 text-forest-ink">
-            What customers say
-          </h2>
+          <span className="font-body text-13 text-forest-light block mb-2 font-medium uppercase tracking-wider">5.0 Google rating · 12 reviews</span>
+          <h2 className="font-display text-33 md:text-41 text-forest-ink">What customers say</h2>
         </AnimateOnScroll>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {REVIEWS.map((review, index) => (
             <AnimateOnScroll key={review.name} animation="fade-up" delay={index * 0.1} duration={0.8}>
               <article className="h-full bg-paper border border-mist p-6 md:p-7 shadow-sm">
-                <div className="flex gap-1 mb-4 text-brand" aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }, (_, star) => <Star key={star} size={15} fill="currentColor" strokeWidth={1.5} />)}
-                </div>
-                <blockquote className="font-body text-15 text-forest-ink/85 leading-relaxed mb-6">
-                  “{review.quote}”
-                </blockquote>
-                <div className="border-t border-mist pt-4 flex items-center justify-between gap-3">
-                  <span className="font-body text-13 font-semibold text-forest-ink">{review.name}</span>
-                  <span className="font-body text-12 text-forest-light">Google review</span>
-                </div>
+                <div className="flex gap-1 mb-4 text-brand" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, star) => <Star key={star} size={15} fill="currentColor" strokeWidth={1.5} />)}</div>
+                <blockquote className="font-body text-15 text-forest-ink/85 leading-relaxed mb-6">“{review.quote}”</blockquote>
+                <div className="border-t border-mist pt-4 flex items-center justify-between gap-3"><span className="font-body text-13 font-semibold text-forest-ink">{review.name}</span><span className="font-body text-12 text-forest-light">Google review</span></div>
               </article>
             </AnimateOnScroll>
           ))}
         </div>
-        <div className="mt-9 text-center">
-          <Link
-            href="/testimonials/"
-            className="inline-flex items-center gap-2 font-body text-15 font-semibold text-forest hover:text-forest-light underline underline-offset-4 transition-colors"
-          >
-            Read all testimonials <span aria-hidden="true">→</span>
-          </Link>
-        </div>
+        <div className="mt-9 text-center"><Link href="/testimonials/" className="inline-flex items-center gap-2 font-body text-15 font-semibold text-forest hover:text-forest-light underline underline-offset-4 transition-colors">Read all reviews <span aria-hidden="true">→</span></Link></div>
       </div>
     </section>
   );

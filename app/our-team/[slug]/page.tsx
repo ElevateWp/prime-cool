@@ -67,7 +67,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'A-Z Home Improvements team', path: '/our-team/' },
+              { name: 'FirstChoice Cleaning team', path: '/our-team/' },
               { name: dentist.name, path: `/our-team/${dentist.slug}/` },
             ]}
           />
@@ -178,7 +178,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   Areas of Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Home improvement services from {dentist.name}
+                  Cleaning services from {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>

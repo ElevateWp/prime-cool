@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="A-Z Home Improvements logo"
+                  alt="FirstChoice Cleaning logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,28 +22,28 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  A-Z Home Improvements
+                  FirstChoice Cleaning
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Extensions, conversions & refurbishments
+                  Home & exterior cleaning
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Extensions, conversions, kitchens, bathrooms and home refurbishments in South Croydon.
+              Regular, deep and one-off cleaning, plus pressure washing for outdoor concrete.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+44 7809 835355</span>
+              <span>+61 480 701 505</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Home improvements in South Croydon
+                FirstChoice Cleaning
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Planning an extension, conversion, renovation, kitchen or bathroom project? Contact our team.
+                Looking for a thorough, reliable clean? Contact Izzy and Bill to discuss your space.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -94,7 +94,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/our-team/" className="text-paper/80 hover:text-lime transition-colors">
-                  Meet the Home Improvements Team
+                  Meet Izzy & Bill
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -127,9 +127,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Home Improvement Advice
-                </Link>
               </li>
               <li>
                 <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
@@ -143,7 +140,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
-                  Discuss Your Project
+                  Request a Cleaning Quote
                 </Link>
               </li>
             </ul>
@@ -169,14 +166,14 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Service area:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
-                  {CLINIC_INFO.primaryLocation.directions}
+                  Contact us to check availability for your property and local service area.
                 </address>
               </div>
               {CLINIC_INFO.contact.website && (
                 <div>
                   <span className="text-paper/50 block text-13">Website:</span>
                   <a href={CLINIC_INFO.contact.website} className="hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
-                    azhomeimprovements.co.uk
+                    firstchoiceclean.com.au
                   </a>
                 </div>
               )}
@@ -190,8 +187,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span>Croydon, Greater London</span>
-            <span>A-Z Home Improvements</span>
+            <span>Open · Closes 6 PM</span>
+            <span>FirstChoice Cleaning</span>
           </div>
         </div>
       </div>

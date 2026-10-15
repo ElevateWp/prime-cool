@@ -4,30 +4,19 @@ const nextConfig = {
   trailingSlash: true,
   async redirects() {
     return [
-      { source: '/dental-implants', destination: '/home-extensions', permanent: true },
-      { source: '/root-canal', destination: '/loft-garage-conversions', permanent: true },
-      { source: '/teeth-whitening', destination: '/kitchens-bathrooms', permanent: true },
-      { source: '/dental-cleaning', destination: '/home-refurbishments', permanent: true },
-      { source: '/braces', destination: '/interior-finishing', permanent: true },
-      { source: '/cosmetic-dentistry', destination: '/roofing-lean-to-improvements', permanent: true },
-      { source: '/dentists/our-doctor', destination: '/our-team/nicholas-and-the-a-z-team', permanent: true },
-      { source: '/dentists', destination: '/our-team', permanent: true },
-      { source: '/dentists/:path*', destination: '/our-team', permanent: true },
-      { source: '/book-appointment', destination: '/request-a-quote', permanent: true },
+      { source: '/home-extensions', destination: '/regular-house-cleaning', permanent: true },
+      { source: '/loft-garage-conversions', destination: '/deep-house-cleaning', permanent: true },
+      { source: '/home-refurbishments', destination: '/deep-house-cleaning', permanent: true },
+      { source: '/interior-finishing', destination: '/regular-house-cleaning', permanent: true },
+      { source: '/kitchens-bathrooms', destination: '/one-off-cleaning', permanent: true },
+      { source: '/roofing-lean-to-improvements', destination: '/pressure-washing', permanent: true },
+      { source: '/blog/:path*', destination: '/about', permanent: true },
+      { source: '/blog', destination: '/about', permanent: true },
       { source: '/emergency-dentist/:path*', destination: '/contact', permanent: true },
       { source: '/emergency-dentist', destination: '/contact', permanent: true },
-      { source: '/blog/understanding-osseointegration-dental-implants', destination: '/blog/planning-a-home-extension', permanent: true },
     ];
   },
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
-  },
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

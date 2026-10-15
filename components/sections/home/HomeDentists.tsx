@@ -15,7 +15,7 @@ export default function HomeDentists() {
                 Our Team
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Meet Nicholas and the team
+                Meet the Founders
               </h2>
             </div>
             <Link
@@ -27,7 +27,7 @@ export default function HomeDentists() {
           </div>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 justify-items-center gap-10 max-w-md mx-auto">
           {DENTISTS.map((dentist, idx) => (
             <DentistCard
               key={dentist.id}

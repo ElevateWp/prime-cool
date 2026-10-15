@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contact and Service Area',
   description:
-    'Contact A-Z Home Improvements on +44 7809 835355 about extensions, conversions, kitchens, bathrooms and home refurbishments in South Croydon.',
+    'Contact FirstChoice Cleaning to arrange regular, deep or one-off home cleaning, or pressure washing for outdoor concrete.',
   pathname: '/contact/',
 });
 
@@ -31,9 +31,9 @@ export default function ContactPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Contact & Quotes
                 </span>
-                <WordRevealH1 text="Talk to Nicholas and the team." />
+                <WordRevealH1 text="Talk to Izzy & Bill." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Call us to discuss your extension, conversion, kitchen, bathroom or home refurbishment project.
+                  Call Izzy and Bill to discuss the cleaning service you need, check availability and request a quote.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -55,14 +55,7 @@ export default function ContactPage() {
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
                     Contact Us
                   </h2>
-                  <a
-                    href="https://www.checkatrade.com/trades/azhomeimprovements?utm_source=google_appointments_redirect&utm_content=business_profile&rwg_token=AE37R_jvfMHdP_NmfdD7z3SjzHBAGM3yV0Wvpc7MkcE23PDUdP2yaRCnLyxGjTxcvDSDfzE4SBOgluBg8F6cAQ0tU9fexSlGAA%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mb-5 inline-flex min-h-11 items-center bg-brand px-5 font-body text-15 font-semibold text-white transition-colors hover:bg-brand-hover"
-                  >
-                    Book online
-                  </a>
+                  <Button href="/request-a-quote/" variant="forest" size="md" className="mb-5">Request a cleaning quote</Button>
 
                   <div className="divide-y divide-mist border-t border-b border-mist">
                     {/* Call */}
@@ -78,7 +71,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Home improvement enquiries</span>
+                      <span className="font-body text-13 text-forest font-medium">Cleaning enquiries</span>
                     </div>
 
                     {/* Phone */}
@@ -98,7 +91,7 @@ export default function ContactPage() {
                     <div className="py-5">
                       <span className="font-body text-13 text-forest-ink/60 block">Website</span>
                       <a href={CLINIC_INFO.contact.website} className="font-display text-21 text-forest hover:underline" target="_blank" rel="noopener noreferrer">
-                        azhomeimprovements.co.uk
+                        firstchoiceclean.com.au
                       </a>
                     </div>
 
@@ -119,7 +112,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.primaryLocation.directions}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Address:</strong> {CLINIC_INFO.primaryLocation.directions}
+                    <strong>Website:</strong> firstchoiceclean.com.au · Phone: {CLINIC_INFO.contact.phone}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -188,7 +181,7 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Home Improvement Quote
+                Cleaning Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
                 Ready to request a quote?

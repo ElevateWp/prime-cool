@@ -10,19 +10,19 @@ export default function HomeBeforeAfter() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <AnimateOnScroll animation="fade-right" duration={0.85} className="lg:col-span-5">
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Project inspiration
+              Cleaning service
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Care in every detail
+              Care in every clean
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Explore residential reference imagery. Speak with us about the right plan for your home.
+              From regular home cleaning to pressure washing outdoor concrete, we agree the details with you and take care of your space.
             </p>
             <Link
-              href="/home-extensions/"
+              href="/pressure-washing/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
             >
-              Explore extensions →
+              Explore pressure washing →
             </Link>
           </AnimateOnScroll>
 
@@ -30,25 +30,25 @@ export default function HomeBeforeAfter() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-08.jpg"
-                  alt="Illustrative residential property image"
+                  src="/images/cleaning-home.jpg"
+                  alt="Home cleaning service"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 bg-[#101D3A]/85 text-white font-body text-12 px-3 py-1">
+                <span className="absolute bottom-3 left-3 bg-[#09264B]/85 text-white font-body text-12 px-3 py-1">
                   Illustrative reference image
                 </span>
               </div>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-09.jpg"
-                  alt="Illustrative residential property image"
+                  src="/images/pressure-washing.jpg"
+                  alt="Outdoor pressure washing service"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 bg-[#101D3A]/85 text-white font-body text-12 px-3 py-1">
+                <span className="absolute bottom-3 left-3 bg-[#09264B]/85 text-white font-body text-12 px-3 py-1">
                   Illustrative reference image
                 </span>
               </div>

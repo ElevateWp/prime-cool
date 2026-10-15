@@ -7,19 +7,19 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'What home improvement projects do you take on?',
-    answer: 'Customer projects include extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments.',
-    relatedLink: { href: '/home-extensions/', label: 'Explore our services →' },
+    question: 'What cleaning projects do you take on?',
+    answer: 'We offer regular house cleaning, deep house cleaning, one-off cleaning and pressure washing for outdoor concrete.',
+    relatedLink: { href: '/regular-house-cleaning/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
-    answer: 'Contact our team to check availability for your property in Croydon or the surrounding area.',
+    answer: 'Contact Izzy and Bill to check availability for your property and the service you need.',
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'Do you carry out kitchen and bathroom projects?',
-    answer: 'Yes. Customer reviews describe kitchen redevelopments and full bathroom refits, including work as part of larger home projects.',
-    relatedLink: { href: '/kitchens-bathrooms/', label: 'Explore kitchens and bathrooms →' },
+    question: 'Do you pressure wash outdoor concrete?',
+    answer: 'Yes. Customers have praised our pressure washing of outdoor concrete and the difference it made.',
+    relatedLink: { href: '/pressure-washing/', label: 'Explore pressure washing →' },
   },
   {
     question: 'How do I request a quote?',
@@ -27,9 +27,9 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/request-a-quote/', label: 'Request a quote →' },
   },
   {
-    question: 'Where does A-Z Home Improvements work?',
-    answer: CLINIC_INFO.primaryLocation.directions,
-    relatedLink: { href: '/contact/', label: 'Check our service area →' },
+    question: 'How do I get a price?',
+    answer: 'Contact us with details about your property and the type of clean you need. We will discuss a competitive price and availability.',
+    relatedLink: { href: '/contact/', label: 'Contact the team →' },
   },
 ];
 
@@ -44,10 +44,10 @@ export default function HomeFaqs() {
               Frequently Asked Questions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Questions about your home project
+              Questions about cleaning
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Clear answers about projects, quotes and the areas we serve.
+              Clear answers about our cleaning services, quotes and availability.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Call or message our team and we will be happy to help.
               </p>
               <a
-                href="tel:+447809835355"
+                href="tel:+61480701505"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

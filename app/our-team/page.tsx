@@ -9,7 +9,7 @@ import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
   title: 'Our Team',
-  description: 'Meet Nicholas and the A-Z Home Improvements team in South Croydon.',
+  description: 'Meet Izzy and Bill, founders of FirstChoice Cleaning.',
   pathname: '/our-team/',
 });
 
@@ -20,9 +20,9 @@ export default function TeamPage() {
         <div className="mx-auto max-w-site px-6 md:px-12">
           <Breadcrumbs items={[{ name: 'Our Team', path: '/our-team/' }]} />
           <div className="mt-8 max-w-3xl">
-            <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">A-Z Home Improvements</span>
-            <WordRevealH1 text="Meet Nicholas and the team." />
-            <p className="mt-6 font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">Established in 2002, A-Z Home Improvements works on home projects across South Croydon and South London. Customers describe clear communication, reliability and care in the details.</p>
+            <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">FirstChoice Cleaning</span>
+            <WordRevealH1 text="Meet Izzy & Bill." />
+            <p className="mt-6 font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">Izzy and Bill founded FirstChoice Cleaning to offer a personal service built on trust, attention to detail, reliability and genuine care for every space.</p>
           </div>
         </div>
       </section>
@@ -30,8 +30,8 @@ export default function TeamPage() {
       <section className="border-b border-mist bg-paper-secondary py-16 md:py-24">
         <div className="mx-auto grid max-w-site grid-cols-1 items-start gap-12 px-6 md:grid-cols-12 md:px-12">
           <div className="md:col-span-4">
-            <h2 className="font-display text-33 text-forest-ink md:text-41">Your project, clearly explained.</h2>
-            <p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/80">From the quotation to completion, Nicholas talks through decisions and keeps customers updated about their project.</p>
+            <h2 className="font-display text-33 text-forest-ink md:text-41">The people behind your clean.</h2>
+            <p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/80">Izzy and Bill bring a personal touch to regular, deep and one-off cleaning, as well as outdoor pressure washing.</p>
           </div>
           <div className="md:col-span-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -45,7 +45,7 @@ export default function TeamPage() {
         <div className="mx-auto max-w-site px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Areas of work</span>
-            <h2 className="font-display text-33 text-forest-ink md:text-41">Home improvements across the house</h2>
+            <h2 className="font-display text-33 text-forest-ink md:text-41">Cleaning services for your space</h2>
           </AnimateOnScroll>
           <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => <Link key={service.slug} href={`/${service.slug}/`} className="border border-mist bg-paper p-6 transition-colors hover:border-brand">
@@ -59,7 +59,7 @@ export default function TeamPage() {
 
       <section className="bg-forest py-14 text-paper md:py-20">
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
-          <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">South Croydon · Established 2002</span><h2 className="font-display text-26 md:text-33">Tell us about your plans.</h2></div>
+          <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">5.0 Google rating · 12 reviews</span><h2 className="font-display text-26 md:text-33">Tell us what you would like cleaned.</h2></div>
           <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest">Request a quote</Link>
         </div>
       </section>

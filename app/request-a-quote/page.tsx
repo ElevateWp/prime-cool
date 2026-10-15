@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Request a Home Improvement Quote',
+  title: 'Request a Cleaning Quote',
   description:
-    'Request a quote for an extension, loft or garage conversion, kitchen, bathroom or home refurbishment from A-Z Home Improvements in South Croydon.',
+    'Request a cleaning quote from FirstChoice Cleaning for regular, deep or one-off house cleaning or outdoor concrete pressure washing.',
   pathname: '/request-a-quote/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Send Your Request',
-    description: 'Tell us about your home improvement project and how you would like us to contact you.',
+    title: 'Complete the form',
+    description: 'Tell us about your space, the cleaning service you need and your preferred timing.',
   },
   {
     step: 2,
-    title: 'Team Review',
-    description: 'Our team reviews your enquiry and discusses availability and next steps.',
+    title: 'WhatsApp opens',
+    description: 'Your details are added to a WhatsApp message addressed to FirstChoice Cleaning.',
   },
   {
     step: 3,
-    title: 'We Get in Touch',
-    description: 'We contact you to discuss your request and arrange an assessment.',
+    title: 'Press Send',
+    description: 'Review the message and press Send in WhatsApp so Izzy and Bill receive your enquiry.',
   },
   {
     step: 4,
-    title: 'Home Improvement Work',
-    description: 'Nicholas and the team complete the agreed home improvement work at your property.',
+    title: 'Cleaning Work',
+    description: 'Izzy and Bill and the team complete the agreed cleaning work at your property.',
   },
 ];
 
@@ -52,9 +52,9 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Personal Service
                 </span>
-                <WordRevealH1 text="Request a home improvement quote." />
+                <WordRevealH1 text="Request a cleaning quote." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Tell us about your extension, conversion, kitchen, bathroom or refurbishment plans. We serve South Croydon and surrounding areas." />
+                  <ScrubbedParagraph text="Tell us about your home, the areas you want cleaned and your preferred timing. We will open a WhatsApp message with your details ready to send." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -67,7 +67,7 @@ export default function BookAppointmentPage() {
                     Prefer to speak with us directly? Call during opening hours.
                   </p>
                   <a
-                    href="tel:+447809835355"
+                    href="tel:+61480701505"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
                   >
                     {CLINIC_INFO.contact.phone}
@@ -179,7 +179,7 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
                 <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  We serve Croydon and surrounding areas. Contact us to confirm availability for your property.
+                  Contact us to confirm availability for your property and local area.
                 </p>
               </div>
             </AnimateOnScroll>

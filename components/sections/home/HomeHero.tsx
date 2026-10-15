@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Home improvements, built around your vision.';
+  const headline = 'A cleaner space, with care.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -111,8 +111,8 @@ export default function HomeHero() {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <Image
-        src="/images/jsroof-stock-01.jpg"
-        alt="Illustrative construction work at a residential property"
+        src="/images/cleaning-home.jpg"
+        alt="A freshly cleaned home"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#1749C9]" />
-              <span className="font-body text-[11px] text-[#6B7280] uppercase tracking-[0.14em]">
-                Construction company in South Croydon
+              <span aria-hidden="true" className="h-px w-8 bg-[#F4770B]" />
+              <span className="font-body text-[11px] text-[#687B91] uppercase tracking-[0.14em]">
+                Professional home & exterior cleaning
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#202A3C] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#183454] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['improvements,', 'vision.'].includes(word) ? 'text-[#1749C9]' : ''}`}
+                      className={`inline-block will-change-transform ${['space,', 'care.'].includes(word) ? 'text-[#F4770B]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,7 +162,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              Extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments, delivered with care by Nicholas and his team.
+              Regular, deep and one-off home cleaning, plus outdoor pressure washing. Friendly, professional service from founders Izzy and Bill.
             </p>
 
             <div
@@ -184,11 +184,11 @@ export default function HomeHero() {
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#202A3C]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#183454]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#202A3C]">Established 2002</span>
+              <span className="font-medium text-[#183454]">5.0 Google rating · 12 reviews</span>
               <span className="hidden sm:inline">•</span>
-              <span>South Croydon, CR2 7RB</span>
+              <span>Home and exterior cleaning</span>
               <span className="hidden sm:inline">•</span>
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F5F8F5] border border-[#DCE3E8] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider font-semibold">
-                A-Z Home Improvements
+            <div className="p-6 sm:p-8 bg-[#F3F8FD] border border-[#DCE6F0] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#183454] uppercase tracking-wider font-semibold">
+                FirstChoice Cleaning
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#202A3C]/90 leading-relaxed">
-                <strong className="text-[#202A3C] font-semibold">Where vision meets reality.</strong> &mdash; home projects shaped around the way you want to live.
+              <p className="font-body text-13 sm:text-15 text-[#183454]/90 leading-relaxed">
+                <strong className="text-[#183454] font-semibold">A cleaner space, with care you can count on.</strong> &mdash; personal service from Izzy and Bill.
               </p>
-              <div className="pt-3 border-t border-[#DCE3E8] flex items-center justify-between text-13 font-body text-[#202A3C]/70">
-                <span>176A Croham Valley Rd</span>
-                <span className="text-[#202A3C] font-semibold">+44 7809 835355</span>
+              <div className="pt-3 border-t border-[#DCE6F0] flex items-center justify-between text-13 font-body text-[#183454]/70">
+                <span>Open · Closes 6 PM</span>
+                <span className="text-[#183454] font-semibold">+61 480 701 505</span>
               </div>
             </div>
           </div>

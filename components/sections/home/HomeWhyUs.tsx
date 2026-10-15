@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Workmanship with care',
-    description: 'Customers highlight careful workmanship, pride in the finish and attention to detail.',
+    title: 'Thorough cleaning',
+    description: 'Customers describe a very thorough service and a clean, tidy result once the job is complete.',
   },
   {
     title: 'Clear communication',
-    description: 'Nicholas explains decisions, talks through choices and keeps customers updated from quote to completion.',
+    description: 'Booking is easy and we keep the process straightforward from first contact to the finished clean.',
   },
   {
     title: 'Reliable and considerate',
-    description: 'Reviews describe a punctual, organised team that is considerate of the home and leaves the site tidy.',
+    description: 'Izzy and Bill are friendly, punctual and reliable, with care for every space they enter.',
   },
   {
-    title: 'Projects across the home',
-    description: 'From kitchens and bathrooms to extensions, conversions and full refurbishments, we discuss the work as one coordinated project.',
+    title: 'Home and exterior cleaning',
+    description: 'Choose regular, deep or one-off home cleaning, or ask us about pressure washing outdoor concrete.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Our Approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why Choose A-Z Home Improvements
+                Why Choose FirstChoice Cleaning
               </h2>
 
               <div className="divide-y divide-mist">
@@ -65,38 +65,38 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                    src="/images/jsroof-stock-02.jpg"
-                    alt="Residential property"
+                    src="/images/cleaning-detail.jpg"
+                    alt="A clean and bright home interior"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#202A3C]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Home improvements
+                  <div className="absolute bottom-3 left-3 bg-[#183454]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Home cleaning
                   </div>
                 </div>
                 {/* Additional residential imagery */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/jsroof-stock-03.jpg"
-                    alt="Brick residential home"
+                    src="/images/cleaning-kitchen.jpg"
+                    alt="Kitchen cleaning"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
                 {/* Residential property detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F8F5] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F3F8FD] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/jsroof-stock-04.jpg"
-                    alt="Traditional pitched roof on a home"
+                    src="/images/pressure-washing.jpg"
+                    alt="Pressure washing an outdoor surface"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#202A3C]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    South Croydon homes
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#183454]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Outdoor cleaning
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://www.azhomeimprovements.co.uk';
+export const BASE_URL = 'https://firstchoiceclean.com.au';
 
 export function createMetadata({
   title,
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_GB',
+      locale: 'en_AU',
       type: 'website',
       images: [
         {
@@ -83,7 +83,7 @@ export function generateLocalBusinessSchema() {
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
-      .filter((item) => item.hours !== 'Closed')
+      .filter((item) => /\d{1,2}:\d{2}\s*(AM|PM)[–-]\d{1,2}:\d{2}\s*(AM|PM)/i.test(item.hours))
       .map((item) => {
         const range = item.hours.match(/(\d{1,2}):(\d{2})\s*(AM|PM)[–-](\d{1,2}):(\d{2})\s*(AM|PM)/i);
         const to24Hour = (hourText: string, minuteText: string, meridiem: string) => {
@@ -115,7 +115,7 @@ export function generateMedicalProcedureSchema(serviceName: string, description:
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Home improvement and building work',
+    serviceType: 'Residential cleaning and pressure washing',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

@@ -30,24 +30,19 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  {CLINIC_INFO.primaryLocation.directions}
+                  Friendly, professional cleaning from founders Izzy and Bill. Contact us to check service availability for your property.
                 </p>
-                {CLINIC_INFO.primaryLocation.landmarks && (
-                  <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
-                    {CLINIC_INFO.primaryLocation.landmarks}
-                  </p>
-                )}
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_INFO.primaryLocation.directions)}`}
+                  href={CLINIC_INFO.contact.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-3 font-body text-13 text-[#1749C9] font-medium hover:underline"
+                  className="inline-block mt-3 font-body text-13 text-[#F4770B] font-medium hover:underline"
                 >
-                  View the address on the map →
+                  Visit firstchoiceclean.com.au →
                 </a>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F5F8F5] border border-[#DCE3E8] px-3 py-1.5 text-12 text-[#202A3C]">
+                    <span key={highlight} className="bg-[#F3F8FD] border border-[#DCE6F0] px-3 py-1.5 text-12 text-[#183454]">
                       {highlight}
                     </span>
                   ))}
@@ -65,7 +60,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.schedule.length > 0
                     ? CLINIC_INFO.schedule.map((item) => (
                         <div key={item.day} className="flex justify-between border-b border-mist py-2 last:border-0">
-                          <span>{item.day}</span><span>{item.hours}</span>
+                    <span>{item.day}</span><span>{item.hours}</span>
                         </div>
                       ))
                     : 'Please call to confirm current availability.'}
@@ -92,14 +87,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/jsroof-stock-05.jpg"
-                  alt="Illustrative residential building"
+                  src="/images/cleaning-detail.jpg"
+                  alt="FirstChoice Cleaning team and services"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain"
+                  className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  A-Z Home Improvements
+                  FirstChoice Cleaning
                 </div>
               </div>
             </AnimateOnScroll>
@@ -108,13 +103,13 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Home Improvements in South Croydon
+                    Cleaning Services
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Extensions, conversions and refurbishments
+                    Regular, deep and one-off cleaning
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Kitchens, bathrooms and full home projects, from the first conversation through to completion.
+                    Home cleaning and pressure washing outdoor concrete, delivered with care and attention to detail.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />

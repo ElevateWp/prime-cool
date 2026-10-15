@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Home Improvements in South Croydon',
+  title: 'Cleaning Services',
   description:
-    'A-Z Home Improvements in South Croydon: extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments. Call +44 7809 835355.',
+    'FirstChoice Cleaning offers regular, deep and one-off house cleaning plus pressure washing for outdoor concrete. Call +61 480 701 505.',
   pathname: '/',
 });
 
@@ -44,10 +44,10 @@ export default function HomePage() {
       {/* SECTION 2A: Positive Google Reviews */}
       <HomeReviews />
 
-      {/* SECTION 3: Home Improvement Services */}
+      {/* SECTION 3: Cleaning Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Home Improvement Services"
+        title="Cleaning Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,19 +55,19 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose A-Z Home Improvements */}
+      {/* SECTION 4: Why Choose FirstChoice Cleaning */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Home Improvement Work */}
+      {/* SECTION 6: Featured Cleaning Work */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Home Improvement Inspiration */}
+      {/* SECTION 9: Cleaning Inspiration */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}
