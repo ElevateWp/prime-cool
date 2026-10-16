@@ -17,6 +17,7 @@ export default function HomeDentists() {
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
                 Prime Cool
               </h2>
+              <p className="mt-4 max-w-2xl font-body text-15 leading-relaxed text-forest-ink/75">Our team helps customers discuss AC and home appliance service needs, understand what information to share and arrange the next steps. Call any time for help with installation, cleaning, maintenance or a service issue.</p>
             </div>
             <Link
               href="/our-team/"

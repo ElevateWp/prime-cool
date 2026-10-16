@@ -16,7 +16,7 @@ export default function HomeBeforeAfter() {
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
               Comfort through thoughtful service
             </h2>
-            <ScrubbedParagraph text="From AC care to appliance services, tell us what your home needs." size="body" className="mb-6" />
+            <ScrubbedParagraph text="From a new AC fitting to cleaning, maintenance or home appliance service, tell us what your home needs. Prime Cool can discuss the unit, the work you have in mind and appointment arrangements, then explain the next steps before anything is scheduled." size="body" className="mb-6" />
             <Link
               href="/home-appliance-services/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"

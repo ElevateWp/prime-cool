@@ -33,7 +33,7 @@ export default function ContactPage() {
                   Service enquiries
                 </span>
                 <WordRevealH1 text="Tell us what service you need." />
-                <ScrubbedParagraph text="Call Prime Cool to discuss AC or home appliance service." className="mt-6 max-w-2xl" />
+                <ScrubbedParagraph text="Call Prime Cool to discuss AC installation, cleaning, maintenance or repair, along with home appliance fitting and service. Tell us what unit you have, what you need help with and where you are in Bahrain. The team is available by phone 24 hours a day to answer enquiries and talk through arranging a visit." className="mt-6 max-w-2xl" />
               </AnimateOnScroll>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Questions about home services</span>
+                      <span className="font-body text-13 text-forest font-medium">Discuss a service request, timing or availability</span>
                     </div>
 
                     {/* Phone */}
@@ -106,7 +106,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.name}
                   </h3>
                   <address className="not-italic font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
-                    {CLINIC_INFO.primaryLocation.directions}
+                    {CLINIC_INFO.primaryLocation.directions} Call before arranging a visit to discuss your location, the service you need and a suitable appointment time.
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
                     <strong>Location:</strong> Bahrain · Phone: {CLINIC_INFO.contact.phone}
@@ -183,6 +183,7 @@ export default function ContactPage() {
               <h2 className="font-display text-33 md:text-41 text-paper">
                 Need a service quote?
               </h2>
+              <p className="mt-3 max-w-xl font-body text-15 leading-relaxed text-paper/75">Tell us about your AC or appliance and the work you are considering. We can discuss the request and the details that affect service pricing.</p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>

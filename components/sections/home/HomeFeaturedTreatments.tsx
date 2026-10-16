@@ -27,10 +27,10 @@ export default function HomeFeaturedTreatments() {
               <h3 className="font-display text-26 md:text-33 text-[#17354A] mb-4">
                 Comfort for your home
               </h3>
-              <ScrubbedParagraph text="Arrange air conditioner installation with Prime Cool. Call to discuss your unit and fitting needs." size="body" className="mb-6" />
+              <ScrubbedParagraph text="Arrange air conditioner installation with Prime Cool across Bahrain. Call to discuss your unit, the room or area it will serve, your location and any fitting requirements. The team can talk through timing and access before agreeing the next steps with you." size="body" className="mb-6" />
               <div className="p-4 bg-[#F1F8FC] border-l-4 border-[#17354A] mb-6 rounded-sm">
                 <span className="font-body text-13 text-[#17354A]/80">
-                <strong className="text-[#17354A] font-semibold">Our approach:</strong> Careful fitting and clear communication.
+                <strong className="text-[#17354A] font-semibold">Our approach:</strong> Discuss the unit, fitting requirements and appointment arrangements before the installation begins.
                 </span>
               </div>
               <Button href="/ac-installation/" variant="ghost" size="md">
@@ -72,10 +72,10 @@ export default function HomeFeaturedTreatments() {
               <h3 className="font-display text-26 md:text-33 text-[#17354A] mb-4">
                 Keep your AC clean and comfortable
               </h3>
-              <ScrubbedParagraph text="Talk to Prime Cool about AC cleaning, maintenance and home appliance services." size="body" className="mb-6" />
+              <ScrubbedParagraph text="Talk to Prime Cool about AC cleaning, routine maintenance or a change in how your unit is working. We can also discuss home appliance service enquiries. Share the unit details and what you have noticed so the team can understand your request and talk through a suitable visit." size="body" className="mb-6" />
               <div className="p-4 bg-[#F1F8FC] border-l-4 border-[#17354A] mb-6 rounded-sm">
                 <span className="font-body text-13 text-[#17354A]/80">
-                  <strong className="text-[#17354A] font-semibold">Clear process:</strong> We will discuss the work and timing with you.
+                  <strong className="text-[#17354A] font-semibold">Clear process:</strong> We will discuss the requested work, availability and timing with you before arranging a visit.
                 </span>
               </div>
               <Button href="/ac-maintenance/" variant="ghost" size="md">

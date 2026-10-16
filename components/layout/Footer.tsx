@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              AC installation, cleaning and maintenance, plus home appliance services across Bahrain.
+              Prime Cool provides AC installation and fitting, cleaning, maintenance and repair support, plus home appliance services across Bahrain. Call any time to describe your request, discuss availability and arrange the next steps.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
               <span>{CLINIC_INFO.contact.phone}</span>
@@ -43,7 +43,7 @@ export default function Footer() {
                 Prime Cool
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need AC or appliance service? Call Prime Cool any time.
+                Need AC or appliance service? Call Prime Cool any time to discuss installation, cleaning, maintenance, repair or appliance service and ask about arranging a visit.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a

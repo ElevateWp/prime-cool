@@ -15,7 +15,7 @@ export default function HomeFinalCTA() {
 
         <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
           <p className="font-body text-17 md:text-21 text-paper/80 leading-relaxed max-w-xl mb-10 mx-auto">
-            Call Prime Cool any time to discuss AC or home appliance service.
+            Call Prime Cool any time to discuss AC installation, cleaning, maintenance or repair, or to ask about home appliance fitting and service. Tell us what is happening and where you are in Bahrain, and we can talk through the next steps.
           </p>
         </AnimateOnScroll>
 

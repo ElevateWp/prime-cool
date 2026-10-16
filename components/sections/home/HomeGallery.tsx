@@ -23,7 +23,7 @@ export default function HomeGallery() {
           <h2 className="font-display text-33 md:text-41 text-[#17354A]">
             Home comfort
           </h2>
-          <ScrubbedParagraph text="Explore Prime Cool services for your home. Call us to discuss your AC or appliance needs." size="body" className="mt-3 max-w-2xl" />
+          <ScrubbedParagraph text="Explore Prime Cool services for your home, from AC installation and fitting to cleaning, maintenance, repair enquiries and home appliance support. Call any time to describe your unit and location, ask about the work you need and discuss how to arrange the service." size="body" className="mt-3 max-w-2xl" />
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-6">

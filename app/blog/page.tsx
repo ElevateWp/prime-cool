@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Home service tips',
   description:
-    'Practical planning ideas for home extensions, conversions, bathrooms and refurbishments from Prime Cool.',
+    'Practical AC cleaning, maintenance, installation and home appliance care guidance from Prime Cool in Bahrain.',
   pathname: '/blog/',
 });
 
@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
                 </span>
                 <WordRevealH1 text="Tips for caring for your AC and home appliances." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Practical advice on AC cleaning, maintenance and home appliance care.
+                  Read practical guidance on caring for your air conditioner and household appliances. Learn what details to share when arranging cleaning, maintenance or installation, how to describe a service issue and what questions to ask before a visit. For advice about a particular unit or an urgent issue, contact Prime Cool directly at any time.
                 </p>
               </AnimateOnScroll>
             </div>

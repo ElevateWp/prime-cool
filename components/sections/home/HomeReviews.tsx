@@ -3,9 +3,9 @@ import Link from 'next/link';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const HIGHLIGHTS = [
-  { name: 'Service for your home', quote: 'Tell us what your home needs and we will discuss the right service.' },
-  { name: 'Clear service arrangements', quote: 'We discuss the requested work and timing before the visit.' },
-  { name: 'Careful work', quote: 'We aim to leave the work area clean and your service clearly explained.' },
+  { name: 'Service for your home', quote: 'Tell us whether you need AC installation, cleaning, maintenance or help with a household appliance. We will listen to your request and discuss the service that fits it.' },
+  { name: 'Clear service arrangements', quote: 'Before a visit, we can talk through the requested work, your location, access to the unit and a suitable time so you know what has been arranged.' },
+  { name: 'Careful work', quote: 'We aim to work neatly, keep you informed while the service is being carried out and explain what has been completed before the visit ends.' },
 ];
 
 export default function HomeReviews() {

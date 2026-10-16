@@ -7,19 +7,19 @@ import ScrubbedParagraph from '@/components/motion/ScrubbedParagraph';
 const REASONS = [
   {
     title: 'Service for your needs',
-    description: 'Tell us about your AC unit or appliance and the service you need.',
+    description: 'Tell us the AC or appliance type, explain the service or issue you have in mind and share your Bahrain location. We can discuss the request and what information will help plan the work.',
   },
   {
     title: 'Clear arrangements',
-    description: 'We discuss the requested work and appointment timing before a visit.',
+    description: 'We talk through the requested work, access to the unit and appointment timing before a visit, so you can understand what to expect and ask questions in advance.',
   },
   {
     title: 'Careful home service',
-    description: 'We aim to leave the service area tidy and explain the completed work.',
+    description: 'We aim to keep the work area tidy, communicate clearly while working and explain what has been completed so you can ask any follow-up questions.',
   },
   {
     title: 'AC and appliance support',
-    description: 'Installation, cleaning and maintenance for AC and home appliances.',
+    description: 'Discuss AC installation, cleaning, maintenance or repair, along with home appliance fitting and service enquiries, through one local point of contact.',
   },
 ];
 

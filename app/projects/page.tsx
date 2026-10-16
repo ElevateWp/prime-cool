@@ -23,14 +23,14 @@ export default function ServicesOverviewPage() {
           <div className="mt-8 max-w-3xl">
             <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Prime Cool · Bahrain</span>
             <WordRevealH1 text="AC and home appliance services." />
-            <ScrubbedParagraph text="Explore the services available from Prime Cool. Call any time to discuss your AC unit, appliance or service needs." className="mt-6 max-w-2xl" />
+            <ScrubbedParagraph text="Explore the air conditioning and home appliance services available from Prime Cool across Bahrain. Whether you are planning a new AC installation, need cleaning or maintenance, or want to discuss an appliance fitting or service issue, call any time to explain what you need and talk through the next steps." className="mt-6 max-w-2xl" />
           </div>
         </div>
       </section>
       <section className="border-b border-mist bg-paper-secondary py-16 md:py-24">
         <div className="mx-auto max-w-site px-6 md:px-12">
           <div className="mb-10 flex flex-col gap-4 border-b border-mist pb-6 sm:flex-row sm:items-end sm:justify-between">
-            <div><span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Our services</span><h2 className="font-display text-26 text-forest-ink md:text-33">Support for your home</h2></div>
+            <div><span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Our services</span><h2 className="font-display text-26 text-forest-ink md:text-33">Support for your home</h2><p className="mt-3 max-w-2xl font-body text-15 leading-relaxed text-forest-ink/75">Choose a service to learn what information to share, how a request can be arranged and what to expect when speaking with Prime Cool.</p></div>
             <div className="border-l-2 border-brand pl-4"><span className="block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Prime Cool</span><span className="mt-1 block font-body text-12 text-forest-light">Available 24 hours · Bahrain</span></div>
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">

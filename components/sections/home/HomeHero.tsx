@@ -162,7 +162,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-                AC installation, cleaning and maintenance, plus home appliance services across Bahrain.
+                From new AC installation and fitting to cleaning, maintenance, repair enquiries and home appliance service, Prime Cool helps you discuss practical needs for your home across Bahrain. Call any time to tell us about your unit, ask about a service and arrange the next steps.
             </p>
 
             <div
@@ -203,7 +203,7 @@ export default function HomeHero() {
                 Prime Cool
               </span>
               <p className="font-body text-13 sm:text-15 text-[#17354A]/90 leading-relaxed">
-                <strong className="text-[#17354A] font-semibold">Care for your home, any time.</strong> AC installation, cleaning and appliance service.
+                <strong className="text-[#17354A] font-semibold">Care for your home, any time.</strong> Discuss AC installation, cleaning, maintenance and repair, as well as home appliance fitting and service, with Prime Cool.
               </p>
               <div className="pt-3 border-t border-[#D5E5ED] flex items-center justify-between text-13 font-body text-[#17354A]/70">
                 <span>Open 24 hours</span>

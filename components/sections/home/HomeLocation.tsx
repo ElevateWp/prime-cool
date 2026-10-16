@@ -15,9 +15,10 @@ export default function HomeLocation() {
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
               Contact and availability
             </span>
-            <h2 className="font-display text-33 md:text-41 text-forest-ink">
+              <h2 className="font-display text-33 md:text-41 text-forest-ink">
               Contact us
             </h2>
+              <p className="mt-4 max-w-3xl font-body text-15 leading-relaxed text-forest-ink/75">Prime Cool is available around the clock for service enquiries across Bahrain. Call to discuss AC installation, cleaning, maintenance or repair, or ask about home appliance fitting and service.</p>
           </div>
         </AnimateOnScroll>
 
@@ -30,7 +31,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  AC installation, cleaning, maintenance and home appliance services across Bahrain.
+                  Prime Cool provides AC installation and fitting, cleaning, maintenance and repair support, as well as home appliance services across Bahrain. Call to explain the unit, describe the work you need and discuss the next steps with the team.
                 </p>
                 <a
                   className="inline-block mt-3 font-body text-13 text-[#087DB8] font-medium hover:underline"
@@ -109,7 +110,7 @@ export default function HomeLocation() {
                     AC installation, cleaning and maintenance
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    AC installation, cleaning and maintenance, plus home appliance service across Bahrain.
+                    Discuss AC installation and fitting, cleaning, maintenance or repair, along with household appliance service enquiries. We can hear about your request and talk through appointment timing and availability.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />

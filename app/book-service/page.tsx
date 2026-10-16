@@ -19,22 +19,22 @@ const BOOKING_STEPS = [
   {
     step: 1,
     title: 'Tell us what you need',
-    description: 'Tell us about your AC or appliance and preferred appointment time.',
+    description: 'Tell us which AC unit or appliance needs attention, describe the service you need and share your Bahrain location and preferred appointment time.',
   },
   {
     step: 2,
     title: 'Send your enquiry',
-    description: 'Review your enquiry details before sending them to Prime Cool.',
+    description: 'Include the issue or installation, cleaning or maintenance request, along with details that will help the team understand your enquiry.',
   },
   {
     step: 3,
     title: 'Submit your request',
-    description: 'Prime Cool will contact you to discuss the requested service.',
+    description: 'Prime Cool will review the information you share and contact you to discuss the requested service and any questions about the work.',
   },
   {
     step: 4,
     title: 'Arrange the service',
-    description: 'Discuss the requested service and agree the next steps.',
+    description: 'Discuss availability, appointment timing and the requested work so you can agree on the next steps together.',
   },
 ];
 
@@ -54,7 +54,7 @@ export default function BookAppointmentPage() {
                 </span>
                 <WordRevealH1 text="Tell us what service you need." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Tell us about the AC or appliance, the issue and your preferred time." />
+                  <ScrubbedParagraph text="Tell us about the AC unit or home appliance, the service you are looking for and any issue you have noticed. Add your Bahrain location and preferred time so Prime Cool can understand the request, discuss availability and help arrange the next steps." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -64,7 +64,7 @@ export default function BookAppointmentPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <span className="font-medium text-forest block">Call Prime Cool:</span>
                   <p className="text-forest-ink/70">
-                    Want to speak to the team? Call any time.
+                    Want to speak to the team first? Call any time to explain your service needs, ask a question or discuss when a visit may be arranged.
                   </p>
                   <a
                     href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -94,7 +94,7 @@ export default function BookAppointmentPage() {
                     What happens next
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    We will discuss your needs and explain the next steps.
+                    Share a few details about your AC or appliance. Prime Cool can discuss the request, answer questions about the service and explain what information may be needed before arranging a visit.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -179,7 +179,7 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
                 <h3 className="font-display text-21 text-forest-ink mb-4">Service area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  Call to confirm availability in your area.
+                  Prime Cool serves customers across Bahrain. Call to share your area and confirm availability for the service you need.
                 </p>
               </div>
             </AnimateOnScroll>

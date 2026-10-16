@@ -30,8 +30,9 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
                   Prime Cool · Air conditioning and home appliance services
                 </span>
                 <WordRevealH1 text={service.name} />
-                <ScrubbedParagraph text={service.tagline} className="mt-6 max-w-2xl" />
+            <ScrubbedParagraph text={service.tagline} className="mt-6 max-w-2xl" />
                 <ScrubbedParagraph text={service.shortDescription} size="body" className="mt-4 max-w-2xl" />
+                <p className="mt-4 max-w-2xl font-body text-15 leading-relaxed text-forest-ink/75">Call Prime Cool any time to describe your unit, share your location and ask questions about this service. We can discuss your requirements, appointment availability and any details needed before arranging the work.</p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Button href="/book-service/" variant="forest" size="lg">Discuss service pricing</Button>
                   <Button href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} variant="ghost" size="lg">
@@ -56,6 +57,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
             <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Service</span>
             <h2 className="font-display text-33 text-forest-ink md:text-41">Service tailored to your home</h2>
             <ScrubbedParagraph text={service.clinicalExplanation} size="body" className="mt-4 max-w-3xl" />
+            <p className="mt-4 max-w-3xl font-body text-15 leading-relaxed text-forest-ink/75">Every home and unit is different. Sharing the unit type, what you have noticed and the work you have in mind helps the team understand your request and discuss a suitable approach with you.</p>
           </AnimateOnScroll>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="border border-mist bg-paper p-6 md:p-8">
@@ -90,7 +92,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
               </article>
             ))}
           </div>
-          <p className="mt-6 max-w-3xl font-body text-13 leading-relaxed text-forest-light">Pricing and timing depend on the requested service. Call us to discuss your needs.</p>
+          <p className="mt-6 max-w-3xl font-body text-13 leading-relaxed text-forest-light">Pricing and timing depend on the requested service, the AC unit or appliance and any additional work that may be needed. Call us with the details to discuss the request, likely factors and appointment availability.</p>
         </div>
       </section>
 

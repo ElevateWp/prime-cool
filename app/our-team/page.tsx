@@ -22,7 +22,7 @@ export default function TeamPage() {
             <div className="md:col-span-7">
               <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">Prime Cool · Bahrain</span>
               <WordRevealH1 text="Here to help keep your home comfortable." />
-              <ScrubbedParagraph text="Get in touch with Prime Cool for air conditioning installation, cleaning and maintenance, or home appliance service." className="mt-6" />
+              <ScrubbedParagraph text="Get in touch with Prime Cool for air conditioning installation, cleaning, maintenance and repair, or home appliance service. Tell us about the unit, your location and what you need help with. Our team is available by phone 24 hours a day to discuss the request and how to arrange the next steps." className="mt-6" />
             </div>
             <div className="flex justify-center md:col-span-5">
               <div className="relative flex aspect-square w-full max-w-sm items-center justify-center border border-mist bg-paper-secondary p-8">
@@ -34,9 +34,9 @@ export default function TeamPage() {
       </section>
       <section className="bg-paper-secondary py-16 md:py-24">
         <div className="mx-auto grid max-w-site grid-cols-1 gap-8 px-6 md:grid-cols-3 md:px-12">
-          <article className="border border-mist bg-paper p-7"><span className="font-body text-13 uppercase tracking-wider text-forest-light">Services</span><h2 className="mt-3 font-display text-26 text-forest-ink">AC installation, cleaning and maintenance</h2></article>
-          <article className="border border-mist bg-paper p-7"><span className="font-body text-13 uppercase tracking-wider text-forest-light">Home appliances</span><h2 className="mt-3 font-display text-26 text-forest-ink">Installation and service support</h2></article>
-          <article className="border border-mist bg-paper p-7"><span className="font-body text-13 uppercase tracking-wider text-forest-light">Availability</span><h2 className="mt-3 font-display text-26 text-forest-ink">Open 24 hours</h2><a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="mt-4 inline-block font-body text-17 font-semibold text-brand">{CLINIC_INFO.contact.phone}</a></article>
+          <article className="border border-mist bg-paper p-7"><span className="font-body text-13 uppercase tracking-wider text-forest-light">Services</span><h2 className="mt-3 font-display text-26 text-forest-ink">AC installation, cleaning and maintenance</h2><p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/75">Discuss new fittings, routine cleaning, maintenance or repair concerns with the team. We can hear about your unit and explain how to arrange the service you need.</p></article>
+          <article className="border border-mist bg-paper p-7"><span className="font-body text-13 uppercase tracking-wider text-forest-light">Home appliances</span><h2 className="mt-3 font-display text-26 text-forest-ink">Installation and service support</h2><p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/75">Share the appliance type and whether you need fitting, cleaning, maintenance or help discussing an issue. Prime Cool can talk through your request and next steps.</p></article>
+          <article className="border border-mist bg-paper p-7"><span className="font-body text-13 uppercase tracking-wider text-forest-light">Availability</span><h2 className="mt-3 font-display text-26 text-forest-ink">Open 24 hours</h2><p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/75">Call any time to discuss a service request, ask about availability or explain an urgent AC or appliance problem.</p><a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="mt-4 inline-block font-body text-17 font-semibold text-brand">{CLINIC_INFO.contact.phone}</a></article>
         </div>
       </section>
     </div>
