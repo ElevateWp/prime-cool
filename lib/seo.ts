@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'ru_KZ',
+      locale: 'en_BH',
       type: 'website',
       images: [
         {
@@ -115,7 +115,7 @@ export function generateMedicalProcedureSchema(serviceName: string, description:
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Дизайн интерьеров и ремонт',
+    serviceType: 'Air conditioning and home appliance services',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

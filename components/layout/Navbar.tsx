@@ -46,8 +46,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-paper/95 backdrop-blur-md py-2 sm:py-2.5 border-b border-[#E2DDE0]/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
-          : 'bg-paper/95 md:bg-paper/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#E2DDE0] shadow-sm'
+          ? 'bg-paper/95 backdrop-blur-md py-2 sm:py-2.5 border-b border-[#D5E5ED]/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
+          : 'bg-paper/95 md:bg-paper/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#D5E5ED] shadow-sm'
       }`}
     >
       <div className="max-w-site mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
@@ -55,11 +55,11 @@ export default function Navbar() {
         <Link
           href="/"
           className="group flex items-center no-underline focus-visible:outline-offset-4 flex-shrink-0 min-w-0"
-          aria-label="Remont Interior Astana — главная"
+          aria-label="Prime Cool home"
         >
           <Image
             src="/images/logo.png"
-            alt="Логотип Remont Interior Astana"
+            alt="Prime Cool logo"
             width={180}
             height={100}
             priority
@@ -68,7 +68,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Primary Navigation (Active on xl screens >= 1200px) */}
-        <nav className="hidden xl:flex items-center gap-7 2xl:gap-8" aria-label="Основная навигация">
+        <nav className="hidden xl:flex items-center gap-7 2xl:gap-8" aria-label="Main navigation">
           {/* Services Dropdown */}
           <div
             className="relative"
@@ -79,14 +79,14 @@ export default function Navbar() {
               type="button"
               className={`font-body text-15 py-2 transition-colors flex items-center gap-1.5 cursor-pointer ${
                 SERVICES.some((service) => pathname?.startsWith(`/${service.slug}/`))
-                  ? 'text-[#1C1C22] font-semibold'
-                  : 'text-[#1C1C22]/80 hover:text-[#73737D] font-medium'
+                  ? 'text-[#17354A] font-semibold'
+                  : 'text-[#17354A]/80 hover:text-[#667D8C] font-medium'
               }`}
               aria-expanded={servicesDropdownOpen}
             >
-              <span>Услуги</span>
+              <span>Services</span>
               <span
-                className={`w-1.5 h-1.5 border-r border-b border-[#1C1C22]/60 transition-transform duration-200 ${
+                className={`w-1.5 h-1.5 border-r border-b border-[#17354A]/60 transition-transform duration-200 ${
                   servicesDropdownOpen ? '-rotate-135 -translate-y-0.5' : 'rotate-45 translate-y-[-2px]'
                 }`}
                 aria-hidden="true"
@@ -96,7 +96,7 @@ export default function Navbar() {
             {/* Dropdown Panel with Pure White Background and Smooth Shadow */}
             {servicesDropdownOpen && (
               <div className="absolute top-full -left-4 pt-2 w-64 z-50 animate-fade-in">
-                <div className="p-2 bg-paper border border-[#E2DDE0] shadow-[0_12px_36px_rgba(17,17,17,0.08)] rounded-2xl">
+                <div className="p-2 bg-paper border border-[#D5E5ED] shadow-[0_12px_36px_rgba(17,17,17,0.08)] rounded-2xl">
                   <div className="space-y-0.5">
                     {SERVICES.map((s) => (
                       <Link
@@ -104,8 +104,8 @@ export default function Navbar() {
                         href={`/${s.slug}/`}
                         className={`block px-3.5 py-2 text-14 font-body transition-all duration-200 rounded-xl ${
                           pathname === `/${s.slug}/`
-                            ? 'bg-[#F5F5F7] text-[#1C1C22] font-semibold shadow-xs'
-                            : 'text-[#1C1C22]/85 hover:bg-[#F5F5F7]/50 hover:text-[#73737D] hover:translate-x-1'
+                            ? 'bg-[#F1F8FC] text-[#17354A] font-semibold shadow-xs'
+                            : 'text-[#17354A]/85 hover:bg-[#F1F8FC]/50 hover:text-[#667D8C] hover:translate-x-1'
                         }`}
                       >
                         <span className="block font-medium">{s.navLabel}</span>
@@ -118,89 +118,89 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/studiya/"
+            href="/about/"
             className={`font-body text-15 py-2 transition-colors ${
-              pathname === '/studiya/'
-                ? 'text-[#1C1C22] font-semibold'
-                : 'text-[#1C1C22]/80 hover:text-[#73737D] font-medium'
+              pathname === '/about/'
+                ? 'text-[#17354A] font-semibold'
+                : 'text-[#17354A]/80 hover:text-[#667D8C] font-medium'
             }`}
           >
-            О студии
+            About us
           </Link>
 
           <Link
-            href="/portfolio/"
+            href="/projects/"
             className={`font-body text-15 py-2 transition-colors ${
-              pathname?.startsWith('/portfolio')
-                ? 'text-[#1C1C22] font-semibold'
-                : 'text-[#1C1C22]/80 hover:text-[#73737D] font-medium'
+              pathname?.startsWith('/projects')
+                ? 'text-[#17354A] font-semibold'
+                : 'text-[#17354A]/80 hover:text-[#667D8C] font-medium'
             }`}
           >
-            Портфолио
+            Services
           </Link>
 
           <Link
-            href="/nasha-studiya/"
+            href="/our-team/"
             className={`font-body text-15 py-2 transition-colors ${
-              pathname?.startsWith('/nasha-studiya')
-                ? 'text-[#1C1C22] font-semibold'
-                : 'text-[#1C1C22]/80 hover:text-[#73737D] font-medium'
+              pathname?.startsWith('/our-team')
+                ? 'text-[#17354A] font-semibold'
+                : 'text-[#17354A]/80 hover:text-[#667D8C] font-medium'
             }`}
           >
-            Наша студия
+            About Prime Cool
           </Link>
 
           <Link
-            href="/kontakty/"
+            href="/contact/"
             className={`font-body text-15 py-2 transition-colors ${
-              pathname === '/kontakty/'
-                ? 'text-[#1C1C22] font-semibold'
-                : 'text-[#1C1C22]/80 hover:text-[#73737D] font-medium'
+              pathname === '/contact/'
+                ? 'text-[#17354A] font-semibold'
+                : 'text-[#17354A]/80 hover:text-[#667D8C] font-medium'
             }`}
           >
-            Контакты
+            Contact
           </Link>
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <Link
-            href="/obsudit-proekt/"
-            className="hidden xl:inline-flex h-10 w-[176px] items-center justify-center rounded-md border border-[#A90F2D] bg-[#A90F2D] px-3 font-body text-13 font-semibold text-white transition-colors hover:border-[#D21F3D] hover:bg-[#D21F3D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A90F2D] whitespace-nowrap"
+            href="/book-service/"
+            className="hidden xl:inline-flex h-10 w-[176px] items-center justify-center rounded-md border border-[#087DB8] bg-[#087DB8] px-3 font-body text-13 font-semibold text-white transition-colors hover:border-[#19A5D8] hover:bg-[#19A5D8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#087DB8] whitespace-nowrap"
           >
-            <span>Обсудить проект</span>
+            <span>Book a service</span>
           </Link>
 
           <Button
-            href="/obsudit-proekt/"
+            href="/emergency-service/"
             variant="forest"
             size="sm"
             className="hidden xl:inline-flex h-9 w-[160px] items-center justify-center gap-2 px-2 text-12 sm:text-13 font-semibold whitespace-nowrap"
           >
-            <span>Обсудить проект</span>
+            <span>Emergency</span>
           </Button>
 
           {/* Mobile / Tablet Hamburger Toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 text-[#1C1C22] focus-visible:outline-offset-2 flex items-center justify-center cursor-pointer rounded-lg hover:bg-[#F5F5F7] transition-colors"
-            aria-label={mobileMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
+            className="xl:hidden p-2 text-[#17354A] focus-visible:outline-offset-2 flex items-center justify-center cursor-pointer rounded-lg hover:bg-[#F1F8FC] transition-colors"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-controls="mobile-navigation"
             aria-expanded={mobileMenuOpen}
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
-                className={`w-full h-[2px] bg-[#1C1C22] transition-transform duration-250 ${
+                className={`w-full h-[2px] bg-[#17354A] transition-transform duration-250 ${
                   mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`w-full h-[2px] bg-[#1C1C22] transition-opacity duration-200 ${
+                className={`w-full h-[2px] bg-[#17354A] transition-opacity duration-200 ${
                   mobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`w-full h-[2px] bg-[#1C1C22] transition-transform duration-250 ${
+                className={`w-full h-[2px] bg-[#17354A] transition-transform duration-250 ${
                   mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -213,9 +213,9 @@ export default function Navbar() {
       {/* Mobile / Tablet Drawer Menu */}
       <div
         id="mobile-navigation"
-        aria-label="Мобильная навигация"
+        aria-label="Mobile navigation"
         aria-hidden={!mobileMenuOpen}
-        className={`xl:hidden fixed inset-x-0 top-[95px] sm:top-[110px] md:top-[121px] bottom-0 bg-paper border-t border-[#E2DDE0] overflow-y-auto overscroll-contain px-4 sm:px-6 py-5 sm:py-6 flex flex-col justify-between z-[999] transition-all duration-300 ease-in-out shadow-2xl ${
+        className={`xl:hidden fixed inset-x-0 top-[95px] sm:top-[110px] md:top-[121px] bottom-0 bg-paper border-t border-[#D5E5ED] overflow-y-auto overscroll-contain px-4 sm:px-6 py-5 sm:py-6 flex flex-col justify-between z-[999] transition-all duration-300 ease-in-out shadow-2xl ${
           mobileMenuOpen
             ? 'opacity-100 pointer-events-auto translate-y-0'
             : 'opacity-0 pointer-events-none -translate-y-4'
@@ -228,14 +228,14 @@ export default function Navbar() {
               onClick={() => setMobileServicesOpen((open) => !open)}
               aria-expanded={mobileServicesOpen}
               aria-controls="mobile-services-list"
-              className="flex min-h-12 w-full items-center justify-between py-2 text-left font-body text-13 font-bold uppercase tracking-wider text-[#1C1C22]"
+              className="flex min-h-12 w-full items-center justify-between py-2 text-left font-body text-13 font-bold uppercase tracking-wider text-[#17354A]"
             >
-              <span>Услуги</span>
+              <span>Services</span>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 aria-hidden="true"
-                className={`mr-1 h-4 w-4 text-[#1C1C22]/70 transition-transform duration-200 ${
+                className={`mr-1 h-4 w-4 text-[#17354A]/70 transition-transform duration-200 ${
                   mobileServicesOpen ? 'rotate-180' : 'rotate-0'
                 }`}
               >
@@ -254,8 +254,8 @@ export default function Navbar() {
                     }}
                     className={`flex min-h-11 items-center rounded-md px-3 font-body text-15 transition-colors ${
                       pathname === `/${s.slug}/`
-                        ? 'bg-[#F2E1E5] font-semibold text-[#1C1C22]'
-                        : 'text-[#1C1C22] hover:bg-[#F5F5F7] hover:text-[#73737D]'
+                        ? 'bg-[#D8EDF8] font-semibold text-[#17354A]'
+                        : 'text-[#17354A] hover:bg-[#F1F8FC] hover:text-[#667D8C]'
                     }`}
                   >
                     {s.navLabel}
@@ -265,68 +265,77 @@ export default function Navbar() {
             )}
           </div>
 
-          <div className="pt-4 border-t border-[#E2DDE0] flex flex-col space-y-3">
+          <div className="pt-4 border-t border-[#D5E5ED] flex flex-col space-y-3">
             <Link
-              href="/studiya/"
+              href="/about/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname === '/studiya/' ? 'text-[#1C1C22] font-semibold' : 'text-[#1C1C22] hover:text-[#73737D]'
+                pathname === '/about/' ? 'text-[#17354A] font-semibold' : 'text-[#17354A] hover:text-[#667D8C]'
               }`}
             >
-              О студии
+              About us
             </Link>
             <Link
-              href="/portfolio/"
+              href="/projects/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname?.startsWith('/portfolio') ? 'text-[#1C1C22] font-semibold' : 'text-[#1C1C22] hover:text-[#73737D]'
+                pathname?.startsWith('/projects') ? 'text-[#17354A] font-semibold' : 'text-[#17354A] hover:text-[#667D8C]'
               }`}
             >
-              Портфолио
+              Services
             </Link>
             <Link
-              href="/nasha-studiya/"
+              href="/our-team/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname?.startsWith('/nasha-studiya') ? 'text-[#1C1C22] font-semibold' : 'text-[#1C1C22] hover:text-[#73737D]'
+                pathname?.startsWith('/our-team') ? 'text-[#17354A] font-semibold' : 'text-[#17354A] hover:text-[#667D8C]'
               }`}
             >
-              Наша студия
+              About Prime Cool
             </Link>
             <Link
-              href="/obsudit-proekt/"
+              href="/book-service/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-16 font-semibold text-[#1C1C22] hover:underline`}
+              className={`font-body text-16 font-semibold text-[#17354A] hover:underline`}
             >
-              Обсудить проект
+              Book a service
             </Link>
             <Link
-              href="/kontakty/"
+              href="/contact/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname === '/kontakty/' ? 'text-[#1C1C22] font-semibold' : 'text-[#1C1C22] hover:text-[#73737D]'
+                pathname === '/contact/' ? 'text-[#17354A] font-semibold' : 'text-[#17354A] hover:text-[#667D8C]'
               }`}
             >
-              Контакты
+              Contact
             </Link>
           </div>
         </div>
 
-        <div className="pt-6 mt-6 border-t border-[#E2DDE0] flex flex-col gap-3 pb-8">
+        <div className="pt-6 mt-6 border-t border-[#D5E5ED] flex flex-col gap-3 pb-8">
           <Button
-            href="/obsudit-proekt/"
+            href="/book-service/"
             variant="forest"
             size="lg"
             className="w-full"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Обсудить проект
+            Book a service
+          </Button>
+          <Button
+            href="/emergency-service/"
+            variant="lime"
+            size="lg"
+            className="w-full"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Emergency service
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
-            className="text-center font-body text-15 text-[#1C1C22] py-2 font-semibold hover:text-[#73737D] transition-colors"
+            className="text-center font-body text-15 text-[#17354A] py-2 font-semibold hover:text-[#667D8C] transition-colors"
           >
-            Позвонить: {CLINIC_INFO.contact.phone}
+            Call: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>

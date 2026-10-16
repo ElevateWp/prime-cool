@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: DentistProfileProps): Promise
   return createMetadata({
     title: `${dentist.name} | ${dentist.title}`,
     description: dentist.bio,
-    pathname: `/nasha-studiya/${dentist.slug}/`,
+    pathname: `/our-team/${dentist.slug}/`,
     image: dentist.image,
   });
 }
@@ -67,8 +67,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Студия Remont Interior Astana', path: '/nasha-studiya/' },
-              { name: dentist.name, path: `/nasha-studiya/${dentist.slug}/` },
+              { name: 'Prime Cool', path: '/our-team/' },
+              { name: dentist.name, path: `/our-team/${dentist.slug}/` },
             ]}
           />
 
@@ -79,7 +79,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src={dentist.image}
-                    alt={`Фото: ${dentist.name}`}
+                    alt={`Photo: ${dentist.name}`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -87,8 +87,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   />
                 </div>
                 {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
-                  <span>Опыт работы:</span>
-                  <span className="font-medium text-forest">{dentist.experienceYears} лет опыта</span>
+                  <span>Experience:</span>
+                  <span className="font-medium text-forest">{dentist.experienceYears} years of experience</span>
                 </div>}
               </AnimateOnScroll>
             </div>
@@ -108,7 +108,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="p-6 bg-mist/30 border-l-2 border-forest mb-8 shadow-sm">
                   <span className="font-body text-13 text-forest font-medium uppercase tracking-wider block mb-2">
-                    Наш подход
+                    Our approach
                   </span>
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed italic">
                     “{dentist.philosophy}”
@@ -116,11 +116,11 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4">
-                  <Button href="/obsudit-proekt/" variant="forest" size="lg">
-                    Обсудить проект с {dentist.name}
+                  <Button href="/book-service/" variant="forest" size="lg">
+                    Book a service with {dentist.name}
                   </Button>
-                  <Button href="/nasha-studiya/" variant="ghost" size="lg">
-                    Вернуться в студию
+                  <Button href="/our-team/" variant="ghost" size="lg">
+                    Back to Prime Cool
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -136,7 +136,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             {dentist.education.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Опыт и специализация
+                  Experience and services
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.education.map((edu, idx) => (
@@ -152,7 +152,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             {dentist.memberships.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  О студии
+                  About us
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.memberships.map((mem, idx) => (
@@ -175,10 +175,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             <AnimateOnScroll animation="fade-up" duration={0.8}>
               <div className="mb-12">
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Направления работы
+                  Our services
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Услуги по интерьеру от {dentist.name}
+                  Services from {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -199,7 +199,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                       href={`/${service.slug}/`}
                       className="font-body text-13 text-forest font-medium hover:underline inline-flex items-center gap-1"
                     >
-                      Подробнее об услуге →
+                      Learn more →
                     </Link>
                   </div>
                 </AnimateOnScroll>
@@ -215,16 +215,16 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Обсудить стоимость проекта
+                Discuss service pricing
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Хотите обсудить проект с {dentist.name}?
+                Need to discuss a service with {dentist.name}?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/obsudit-proekt/" variant="lime" size="lg">
-              Обсудить проект
+            <Button href="/book-service/" variant="lime" size="lg">
+              Book a service
             </Button>
           </AnimateOnScroll>
         </div>

@@ -21,12 +21,12 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Remont Interior Astana studio profile */}
+        {/* Prime Cool studio profile */}
         <div className="relative w-full aspect-[4/5] bg-paper overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
           {/* Interior project image */}
           <Image
             src={dentist.image}
-            alt={`Идеи дизайна интерьера от ${dentist.name}`}
+            alt={`Prime Cool home services from ${dentist.name}`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             className={`object-cover transition-all duration-500 ease-nova-ease ${
@@ -42,7 +42,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
 
           {dentist.experienceYears > 0 && (
             <div className="absolute bottom-3 right-3 bg-forest text-paper font-body text-13 px-2.5 py-0.5">
-              {dentist.experienceYears} лет опыта
+              {dentist.experienceYears} years of experience
             </div>
           )}
         </div>
@@ -53,7 +53,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
             {dentist.title}
           </span>
           <h3 className="font-display text-21 sm:text-24 md:text-26 text-forest-ink group-hover:text-forest transition-colors mb-2">
-            <Link href={`/nasha-studiya/${dentist.slug}/`} className="no-underline text-inherit">
+            <Link href={`/our-team/${dentist.slug}/`} className="no-underline text-inherit">
               {dentist.name}
             </Link>
           </h3>

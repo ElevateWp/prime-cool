@@ -9,11 +9,11 @@ export default function HomeFeaturedTreatments() {
     <section className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#1C1C22] block mb-2 font-medium uppercase tracking-wider">
-            Услуги по дизайну интерьера
+          <span className="font-body text-13 text-[#17354A] block mb-2 font-medium uppercase tracking-wider">
+            Our services
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#1C1C22]">
-            Дизайн с учётом особенностей вашего пространства
+          <h2 className="font-display text-33 md:text-41 text-[#17354A]">
+            AC and appliance care for your home
           </h2>
         </AnimateOnScroll>
 
@@ -21,20 +21,20 @@ export default function HomeFeaturedTreatments() {
           {/* Featured work: residential improvements */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6 order-2 lg:order-1">
-              <span className="font-body text-13 text-[#1C1C22] uppercase tracking-wider block mb-2 font-medium">
-                Дизайн жилых интерьеров
+              <span className="font-body text-13 text-[#17354A] uppercase tracking-wider block mb-2 font-medium">
+                AC installation
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#1C1C22] mb-4">
-                Продуманный и уютный дом
+              <h3 className="font-display text-26 md:text-33 text-[#17354A] mb-4">
+                Comfort for your home
               </h3>
-              <ScrubbedParagraph text="Продумайте интерьер дома с учётом вашего распорядка, стиля и назначения каждой комнаты." size="body" className="mb-6" />
-              <div className="p-4 bg-[#F5F5F7] border-l-4 border-[#1C1C22] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#1C1C22]/80">
-                <strong className="text-[#1C1C22] font-semibold">Наш подход:</strong> Продуманные планировки и тщательно подобранные детали отделки.
+              <ScrubbedParagraph text="Arrange air conditioner installation with Prime Cool. Call to discuss your unit and fitting needs." size="body" className="mb-6" />
+              <div className="p-4 bg-[#F1F8FC] border-l-4 border-[#17354A] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#17354A]/80">
+                <strong className="text-[#17354A] font-semibold">Our approach:</strong> Careful fitting and clear communication.
                 </span>
               </div>
-              <Button href="/dizayn-zhilykh-intererov/" variant="ghost" size="md">
-                Смотреть дизайн жилых интерьеров
+              <Button href="/ac-installation/" variant="ghost" size="md">
+                Explore AC installation
               </Button>
             </AnimateOnScroll>
 
@@ -42,7 +42,7 @@ export default function HomeFeaturedTreatments() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/home-gallery/project-01.jpg"
-                  alt="Идеи дизайна жилого интерьера"
+                  alt="Air conditioning service"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-top"
@@ -57,7 +57,7 @@ export default function HomeFeaturedTreatments() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/home-gallery/project-04.jpg"
-                  alt="Идеи ремонта интерьера и отделки"
+                  alt="AC cleaning and maintenance"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -66,20 +66,20 @@ export default function HomeFeaturedTreatments() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6">
-              <span className="font-body text-13 text-[#1C1C22] uppercase tracking-wider block mb-2 font-medium">
-                Ремонт интерьера и планировка пространства
+              <span className="font-body text-13 text-[#17354A] uppercase tracking-wider block mb-2 font-medium">
+                AC cleaning and maintenance
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#1C1C22] mb-4">
-                Планируйте ремонт с ясным пониманием
+              <h3 className="font-display text-26 md:text-33 text-[#17354A] mb-4">
+                Keep your AC clean and comfortable
               </h3>
-              <ScrubbedParagraph text="Обсудите концепцию дизайна, материалы и объём проекта до начала ремонтных работ." size="body" className="mb-6" />
-              <div className="p-4 bg-[#F5F5F7] border-l-4 border-[#1C1C22] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#1C1C22]/80">
-                  <strong className="text-[#1C1C22] font-semibold">Понятный процесс:</strong> Обсудим детали и сроки до утверждения проекта.
+              <ScrubbedParagraph text="Talk to Prime Cool about AC cleaning, maintenance and home appliance services." size="body" className="mb-6" />
+              <div className="p-4 bg-[#F1F8FC] border-l-4 border-[#17354A] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#17354A]/80">
+                  <strong className="text-[#17354A] font-semibold">Clear process:</strong> We will discuss the work and timing with you.
                 </span>
               </div>
-              <Button href="/remont-interera/" variant="ghost" size="md">
-                Смотреть услуги по ремонту интерьера
+              <Button href="/ac-maintenance/" variant="ghost" size="md">
+                Explore AC cleaning
               </Button>
             </AnimateOnScroll>
           </div>

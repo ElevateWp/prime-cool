@@ -6,20 +6,20 @@ import ScrubbedParagraph from '@/components/motion/ScrubbedParagraph';
 
 const REASONS = [
   {
-    title: 'Пространство для своих задач',
-    description: 'Учитываем назначение каждой комнаты и то, что сделает её удобнее и комфортнее.',
+    title: 'Service for your needs',
+    description: 'Tell us about your AC unit or appliance and the service you need.',
   },
   {
-    title: 'Понятный план проекта',
-    description: 'До начала работ обсуждаем планировку, материалы, сроки и согласованный объём.',
+    title: 'Clear arrangements',
+    description: 'We discuss the requested work and appointment timing before a visit.',
   },
   {
-    title: 'Продуманный выбор материалов',
-    description: 'Подбираем отделку и детали, которые гармонично сочетаются в интерьере.',
+    title: 'Careful home service',
+    description: 'We aim to leave the service area tidy and explain the completed work.',
   },
   {
-    title: 'Жилые и коммерческие интерьеры',
-    description: 'Дизайн интерьеров, планировка пространства, ремонт и отделка для вашего проекта.',
+    title: 'AC and appliance support',
+    description: 'Installation, cleaning and maintenance for AC and home appliances.',
   },
 ];
 
@@ -32,10 +32,10 @@ export default function HomeWhyUs() {
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Наш подход
+                Our approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Почему выбирают Remont Interior Astana
+                Home services in Bahrain, available 24 hours
               </h2>
 
               <div className="divide-y divide-mist">
@@ -65,37 +65,37 @@ export default function HomeWhyUs() {
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
                     src="/images/home-gallery/project-02.jpg"
-                    alt="Светлый и продуманный дизайн интерьера"
+                    alt="Prime Cool home service"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#1C1C22]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Дизайн интерьера
+                  <div className="absolute bottom-3 left-3 bg-[#17354A]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    AC service
                   </div>
                 </div>
                 {/* Additional residential imagery */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/home-gallery/project-06.jpg"
-                    alt="Отделка и мебель в интерьере"
+                    alt="Home appliance service"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
                 {/* Residential property detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F5F7] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F1F8FC] overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/home-gallery/project-03.jpg"
-                    alt="Идеи планировки интерьера"
+                    alt="Air conditioning maintenance"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#1C1C22]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Планировка пространства
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#17354A]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Available 24 hours
                   </div>
                 </div>
               </div>

@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Советы по дизайну интерьера',
+  title: 'Home service tips',
   description:
-    'Practical planning ideas for home extensions, conversions, bathrooms and refurbishments from Remont Interior Astana.',
+    'Practical planning ideas for home extensions, conversions, bathrooms and refurbishments from Prime Cool.',
   pathname: '/blog/',
 });
 
@@ -23,17 +23,17 @@ export default function BlogIndexPage() {
         <TextureBackground variant="blog" className="opacity-20" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Советы по дизайну интерьера', path: '/blog/' }]} />
+          <Breadcrumbs items={[{ name: 'Home service tips', path: '/blog/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Советы по дизайну интерьера
+                  Home service tips
                 </span>
-                <WordRevealH1 text="Идеи для планирования вашего следующего проекта." />
+                <WordRevealH1 text="Tips for caring for your AC and home appliances." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Практические советы по планированию пристройки, перепланировки, ремонта ванной комнаты или обновления всего дома.
+                  Practical advice on AC cleaning, maintenance and home appliance care.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -69,7 +69,7 @@ export default function BlogIndexPage() {
                         </p>
                         {author && (
                           <span className="font-body text-13 text-forest-ink/60 block">
-                            Автор: {author.name} • {author.title}
+                            By: {author.name} • {author.title}
                           </span>
                         )}
                       </div>
@@ -80,7 +80,7 @@ export default function BlogIndexPage() {
                           href={`/blog/${post.slug}/`}
                           className="font-body text-13 text-forest font-medium underline underline-offset-4 group-hover:text-forest-light"
                         >
-                          Читать статью →
+                          Read article →
                         </Link>
                       </div>
                     </div>

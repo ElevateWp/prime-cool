@@ -27,9 +27,9 @@ export default function BookingForm() {
     fullName: '',
     phone: '',
     email: '',
-    service: 'dizayn-zhilykh-intererov',
+    service: 'ac-installation',
     preferredDate: '',
-    preferredTime: 'Утро (08:00 – 12:00)',
+    preferredTime: 'Morning (08:00 – 12:00)',
     notes: '',
   });
 
@@ -40,16 +40,16 @@ export default function BookingForm() {
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Введите ваше имя и фамилию.';
+      newErrors.fullName = 'Please enter your name.';
     }
     if (!formData.phone.trim() || formData.phone.trim().length < 7) {
-      newErrors.phone = 'Укажите корректный номер телефона.';
+      newErrors.phone = 'Please enter a valid phone number.';
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
-      newErrors.email = 'Укажите корректный адрес электронной почты.';
+      newErrors.email = 'Please enter a valid email address.';
     }
     if (!formData.preferredDate) {
-      newErrors.preferredDate = 'Выберите удобную дату для обсуждения проекта.';
+      newErrors.preferredDate = 'Please choose a preferred date.';
     }
 
     setErrors(newErrors);
@@ -72,28 +72,28 @@ export default function BookingForm() {
     return (
       <div className="p-8 md:p-12 bg-forest text-paper transition-all duration-500 ease-nova-ease">
         <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-          Заявка отправлена
+          Enquiry sent
         </span>
       <h3 className="font-display text-33 md:text-41 text-paper mb-4">
-          Заявка отправлена
+          Enquiry sent
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
-          Спасибо, {formData.fullName}. Мы рассмотрим вашу заявку по интерьерному проекту и свяжемся с вами по номеру <strong className="text-lime">{formData.phone}</strong>, чтобы обсудить дальнейшие шаги.
+          Thank you, {formData.fullName}. We will review your enquiry and contact you at <strong className="text-lime">{formData.phone}</strong>, to discuss the next steps.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
           <div className="flex justify-between">
-            <span className="text-paper/60">Выбранная услуга:</span>
+            <span className="text-paper/60">Selected service:</span>
             <span className="text-paper font-medium">
               {SERVICES.find((s) => s.slug === formData.service)?.name || formData.service}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Удобная дата:</span>
+            <span className="text-paper/60">Preferred date:</span>
             <span className="text-paper font-medium">{formData.preferredDate}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Удобное время:</span>
+            <span className="text-paper/60">Preferred time:</span>
             <span className="text-paper font-medium">{formData.preferredTime}</span>
           </div>
         </div>
@@ -108,21 +108,21 @@ export default function BookingForm() {
                 fullName: '',
                 phone: '',
                 email: '',
-                service: 'dizayn-zhilykh-intererov',
+                service: 'ac-installation',
                 preferredDate: '',
-                preferredTime: 'Утро (08:00 – 12:00)',
+                preferredTime: 'Morning (08:00 – 12:00)',
                 notes: '',
               });
             }}
             className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
           >
-            Отправить ещё одну заявку
+            Send another enquiry
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
             className="font-body text-13 text-paper/80 hover:text-lime underline underline-offset-4"
           >
-            Нужна помощь? Позвоните: {CLINIC_INFO.contact.phone}
+            Need help? Call: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>
@@ -137,17 +137,17 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Обсудить интерьерный проект
+          Book a service
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Расскажите о своём пространстве и нужной услуге. Мы свяжемся с вами, чтобы обсудить проект и дальнейшие шаги.
+          Tell us what service you need. We will contact you to discuss next steps.
         </p>
       </div>
 
       {/* Full Name */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="fullName" className="font-body text-13 text-forest-ink/70">
-          Имя и фамилия <span className="text-forest">*</span>
+          Name <span className="text-forest">*</span>
         </label>
         <input
           id="fullName"
@@ -157,12 +157,12 @@ export default function BookingForm() {
             setFormData({ ...formData, fullName: e.target.value });
             if (errors.fullName) setErrors({ ...errors, fullName: undefined });
           }}
-          placeholder="Например, Иван Иванов"
+          placeholder="For example, Alex Smith"
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#73737D] transition-all duration-200">
+          <span className="font-body text-13 text-[#667D8C] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -172,7 +172,7 @@ export default function BookingForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="phone" className="font-body text-13 text-forest-ink/70">
-            Номер телефона <span className="text-forest">*</span>
+            Phone number <span className="text-forest">*</span>
           </label>
           <input
             id="phone"
@@ -182,18 +182,18 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+7 778 214 2175"
+            placeholder="+973 6636 1864"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#73737D]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#667D8C]">{errors.phone}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="email" className="font-body text-13 text-forest-ink/70">
-            Электронная почта <span className="text-forest">*</span>
+            Email address <span className="text-forest">*</span>
           </label>
           <input
             id="email"
@@ -203,12 +203,12 @@ export default function BookingForm() {
               setFormData({ ...formData, email: e.target.value });
               if (errors.email) setErrors({ ...errors, email: undefined });
             }}
-            placeholder="имя@example.com"
+            placeholder="name@example.com"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#73737D]">{errors.email}</span>
+            <span className="font-body text-13 text-[#667D8C]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Услуга по интерьеру <span className="text-forest">*</span>
+          Service needed <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,7 +229,7 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Другой интерьерный проект</option>
+          <option value="general-consultation">Other home service</option>
         </select>
       </div>
 
@@ -237,7 +237,7 @@ export default function BookingForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredDate" className="font-body text-13 text-forest-ink/70">
-            Удобная дата <span className="text-forest">*</span>
+            Preferred date <span className="text-forest">*</span>
           </label>
           <input
             id="preferredDate"
@@ -252,13 +252,13 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#73737D]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#667D8C]">{errors.preferredDate}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredTime" className="font-body text-13 text-forest-ink/70">
-            Удобное время
+            Preferred time
           </label>
           <select
             id="preferredTime"
@@ -266,9 +266,9 @@ export default function BookingForm() {
             onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors bg-paper cursor-pointer"
           >
-            <option value="Утро (08:00 – 12:00)">Утро (08:00 – 12:00)</option>
-            <option value="День (12:00 – 16:00)">День (12:00 – 16:00)</option>
-            <option value="После обеда (16:00 – 17:30)">После обеда (16:00 – 17:30)</option>
+            <option value="Morning (08:00 – 12:00)">Morning (08:00 – 12:00)</option>
+            <option value="Afternoon (12:00 – 16:00)">Afternoon (12:00 – 16:00)</option>
+            <option value="Evening (16:00 – 17:30)">Evening (16:00 – 17:30)</option>
           </select>
         </div>
       </div>
@@ -276,14 +276,14 @@ export default function BookingForm() {
       {/* Additional project notes */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="notes" className="font-body text-13 text-forest-ink/70">
-          Расскажите о пространстве (необязательно)
+          Tell us about the appliance or issue (optional)
         </label>
         <textarea
           id="notes"
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Расскажите о комнатах, стиле, материалах и приоритетах проекта..."
+          placeholder="Describe your AC unit, appliance or service request..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>
@@ -297,10 +297,10 @@ export default function BookingForm() {
           disabled={isSubmitting}
           className="w-full sm:w-auto"
         >
-          {isSubmitting ? 'Отправка заявки...' : 'Отправить заявку на проект'}
+          {isSubmitting ? 'Sending...' : 'Send service enquiry'}
         </Button>
         <span className="font-body text-13 text-forest-ink/60">
-          Мы используем ваши данные, чтобы ответить на заявку.
+          Your details will only be used to respond to this enquiry.
         </span>
       </div>
     </form>

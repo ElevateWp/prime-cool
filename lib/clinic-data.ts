@@ -24,53 +24,65 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: 'Remont Interior Astana', legalName: 'Remont Interior Astana', tagline: 'Интерьеры, продуманные для вашей жизни.',
-  primaryLocation: { street: '', suite: '', city: 'Астана', state: 'Акмолинская область', postalCode: '010000', country: 'Казахстан', directions: 'Казахстан, Акмолинская область, Астана, 010000', landmarks: '' },
-  contact: { phone: '+7 778 214 2175', emergencyPhone: '+7 778 214 2175', whatsapp: '+7 778 214 2175', website: '', email: '' },
-  identityHighlights: ['Дизайн интерьеров в Астане', 'Открыто круглосуточно'],
-  schedule: [{ day: 'Ежедневно', hours: 'Круглосуточно' }],
+  name: 'Prime Cool', legalName: 'Prime Cool', tagline: 'Comfort, care and cooling around the clock.',
+  primaryLocation: { street: '', suite: '', city: '', state: '', postalCode: '', country: 'BH', directions: 'Bahrain', landmarks: '' },
+  contact: { phone: '+973 6636 1864', emergencyPhone: '+973 6636 1864', whatsapp: '+973 6636 1864' },
+  identityHighlights: ['Air conditioning and home appliance services', 'Available 24 hours'],
+  schedule: [{ day: 'Every day', hours: '24 hours' }],
   verifiedStats: [
-    { value: 24, suffix: 'ч', label: 'Открыто', description: 'Круглосуточно' },
-    { value: 4, suffix: '', label: 'Услуги по интерьеру', description: 'Дизайн, ремонт и планировка пространства' },
-    { value: 1, suffix: '', label: 'Студия в Астане', description: 'Астана, Казахстан' },
+    { value: 24, suffix: '/7', label: 'Always available', description: 'Call any time for service enquiries.' },
+    { value: 4, suffix: '', label: 'Service areas', description: 'Installation, cleaning, maintenance and appliance support.' },
+    { value: 1, suffix: '', label: 'Local team', description: 'Serving customers across Bahrain.' },
   ],
   accreditations: [],
 };
 
 export const DENTISTS: DentistProfile[] = [{
-  id: 'remont-interer-astana', slug: 'remont-interer-astana', name: 'Remont Interior Astana', title: 'Студия дизайна интерьеров',
-  qualifications: 'Дизайн интерьеров · Астана, Казахстан', specialization: 'Жилые и коммерческие интерьеры', experienceYears: 0,
-  bio: 'Remont Interior Astana занимается жилыми и коммерческими пространствами: мы предлагаем дизайн интерьеров, планировку пространства и ремонт.',
-  philosophy: 'Продуманные планировки, тщательно подобранные материалы и детали для каждого пространства.',
-  education: [], memberships: [], specialties: ['Дизайн интерьеров', 'Планировка пространства', 'Ремонт интерьера', 'Отделка интерьера'],
-  image: '/images/home-gallery/project-08.jpg', warmImage: '/images/home-gallery/project-08.jpg',
+  id: 'prime-cool', slug: 'prime-cool', name: 'Prime Cool', title: 'Air Conditioning & Home Appliance Services',
+  qualifications: 'Air conditioning · Home appliances · Bahrain', specialization: 'Installation, cleaning and maintenance', experienceYears: 0,
+  bio: 'Prime Cool provides air conditioning and home appliance services in Bahrain, including installation, cleaning and maintenance.',
+  philosophy: 'Clear communication, tidy work and practical support for your home.',
+  education: [], memberships: [], specialties: ['AC installation', 'AC cleaning', 'AC maintenance', 'Home appliance services'],
+  image: '/images/logo.png', warmImage: '/images/logo.png',
 }];
 
-const makeService = (slug: string, name: string, tagline: string, description: string, needs: string[], benefits: string[], image: string, faqs: { question: string; answer: string }[]): ServiceDetail => ({
+const makeService = (slug: string, name: string, tagline: string, description: string, needs: string[], benefits: string[], faqs: { question: string; answer: string }[]): ServiceDetail => ({
   slug, name, navLabel: name, tagline, shortDescription: description, clinicalExplanation: description,
   whoNeeds: needs, benefits,
-  indications: needs.map((condition) => ({ condition, explanation: `Расскажите о своём пространстве и приоритетах, чтобы мы могли предложить подход к дизайну для раздела «${condition.toLowerCase()}».` })),
+  indications: needs.map((condition) => ({ condition, explanation: `Contact Prime Cool to discuss your ${condition.toLowerCase()} requirements.` })),
   procedureSteps: [
-    { stepNumber: 1, title: 'Расскажите о своих идеях', duration: 'Первый разговор', description: 'Расскажите о пространстве, стиле и целях.', clinicalDetails: 'Сначала мы узнаём, что важно именно для вас.' },
-    { stepNumber: 2, title: 'Продумайте детали', duration: 'Планирование дизайна', description: 'Обсудим планировку, материалы и объём проекта.', clinicalDetails: 'Вместе рассмотрим предполагаемый объём работ.' },
-    { stepNumber: 3, title: 'Согласуйте проект', duration: 'График проекта', description: 'Скоординируем дизайн и согласованные ремонтные работы.', clinicalDetails: 'Вместе согласуем сроки и детали проекта.' },
-    { stepNumber: 4, title: 'Наслаждайтесь пространством', duration: 'Завершение проекта', description: 'Оцените готовый интерьер и последние детали.', clinicalDetails: 'Вместе осмотрим результат согласованных работ.' },
+    { stepNumber: 1, title: 'Tell us what you need', duration: 'Initial call', description: 'Share the appliance or AC issue and your location.', clinicalDetails: 'We will clarify the service required.' },
+    { stepNumber: 2, title: 'Arrange a visit', duration: 'Scheduling', description: 'Choose a suitable time. The team is available 24 hours.', clinicalDetails: 'Timing and access are confirmed with you.' },
+    { stepNumber: 3, title: 'Service and inspection', duration: 'On-site service', description: 'The requested installation, cleaning or maintenance is carried out.', clinicalDetails: 'The work is discussed with you before proceeding.' },
+    { stepNumber: 4, title: 'Review the work', duration: 'Completion', description: 'Check the completed service and ask any follow-up questions.', clinicalDetails: 'The team will explain the completed work.' },
   ],
   recoveryTimeline: [
-    { period: 'Первый разговор', expectedSensations: 'Чёткое обсуждение ваших целей и пространства.', careProtocol: 'Расскажите о предпочтительном стиле, потребностях и ограничениях.' },
-    { period: 'Планирование дизайна', expectedSensations: 'Формируются планировка, подбор материалов и объём работ.', careProtocol: 'Вместе рассмотрите предложенный план и детали.' },
-    { period: 'Завершение проекта', expectedSensations: 'Готовый интерьер, которым можно пользоваться.', careProtocol: 'Проверьте согласованный объём работ и завершающие детали.' },
+    { period: 'Before the visit', expectedSensations: 'A clear discussion of your requirements.', careProtocol: 'Describe the appliance, issue and preferred appointment time.' },
+    { period: 'During service', expectedSensations: 'The requested work is completed at your property.', careProtocol: 'Keep the work area accessible where possible.' },
+    { period: 'After service', expectedSensations: 'Your AC or appliance is ready for use, depending on the issue.', careProtocol: 'Follow any care guidance provided by the technician.' },
   ],
-  costTransparency: { baseRange: 'Стоимость проекта обсуждается после оценки пространства и ваших требований.', factors: ['Площадь и текущее состояние объекта', 'Объём дизайн-проекта и выбранные материалы', 'Согласованные работы'], whatIsIncluded: ['Обсуждение проекта', 'Планирование дизайна', 'Согласованные интерьерные работы'], note: 'Свяжитесь с нами, чтобы обсудить детали и стоимость проекта.' },
-  beforeAfterCase: { category: name, clinicalContext: 'Идеи для дизайна и ремонта интерьера.', beforeLabel: 'Деталь интерьера', afterLabel: 'Готовое пространство', beforeImage: image, afterImage: image, timeframe: 'Сроки проекта согласуются с учётом объёма работ' },
-  assignedDentistId: 'remont-interer-astana', faqs,
+  costTransparency: { baseRange: 'Please call to discuss service pricing.', factors: ['Type of appliance or AC unit', 'Requested service', 'Parts or additional work, if needed'], whatIsIncluded: ['Service discussion', 'Appointment coordination', 'Agreed service work'], note: 'Any additional work can be discussed before it proceeds.' },
+  beforeAfterCase: { category: name, clinicalContext: description, beforeLabel: 'Service request', afterLabel: 'Completed service', beforeImage: '/images/logo.png', afterImage: '/images/logo.png', timeframe: 'Timing depends on the requested service.' },
+  assignedDentistId: 'prime-cool', faqs,
 });
 
 export const SERVICES: ServiceDetail[] = [
-  makeService('dizayn-zhilykh-intererov', 'Дизайн жилых интерьеров', 'Комфортные, продуманные интерьеры для вашей повседневной жизни.', 'Создадим гармоничный, практичный и индивидуальный интерьер дома — от первых идей планировки до завершающих деталей.', ['Интерьеры квартир и домов', 'Обновление комнат и дизайн всего дома', 'Удобная планировка и целостная отделка'], ['Дизайн с учётом ваших потребностей', 'Внимание к материалам и деталям', 'Единая концепция интерьера дома'], '/images/home-gallery/project-01.jpg', [{ question: 'Можно оформить только одну комнату?', answer: 'Да. Расскажите о комнате, своих целях и желаемом объёме работ — мы обсудим ваш проект.' }, { question: 'Можно ли выбрать отделочные материалы?', answer: 'Мы обсудим варианты отделки и материалов в рамках дизайн-проекта.' }]),
-  makeService('dizayn-kommercheskikh-intererov', 'Дизайн коммерческих интерьеров', 'Приветливые и функциональные пространства для работы и бизнеса.', 'Спланируем интерьер с учётом того, как им пользуются ваша команда и посетители, уделив внимание планировке, атмосфере и отделке.', ['Интерьеры офисов и студий', 'Пространства для клиентов и гостей', 'Функциональное обновление существующего интерьера'], ['Планировка с учётом назначения пространства', 'Целостная концепция интерьера', 'Отделка, соответствующая задачам проекта'], '/images/home-gallery/project-05.jpg', [{ question: 'Вы занимаетесь коммерческими интерьерами?', answer: 'Свяжитесь с Remont Interior Astana, чтобы обсудить ваше коммерческое пространство и задачи проекта.' }, { question: 'Можно обновить уже готовое пространство?', answer: 'Да. Расскажите, что вас устраивает, что хотелось бы изменить и какой объём работ вы рассматриваете.' }]),
-  makeService('remont-interera', 'Ремонт интерьера', 'Обновите комнаты по чёткому и продуманному плану.', 'Организуем обновление интерьера с учётом ваших целей, уделяя внимание планировке, отделке и практичным деталям.', ['Ремонт комнат и квартир', 'Обновление кухонь и ванных комнат', 'Отделочные работы и обновление интерьера'], ['Чёткое обсуждение объёма проекта', 'Совместный выбор материалов и деталей', 'Планирование с учётом особенностей вашего объекта'], '/images/home-gallery/project-02.jpg', [{ question: 'Можно совместить ремонт с разработкой дизайна?', answer: 'При обсуждении проекта мы можем рассмотреть потребности в дизайне и ремонте вместе.' }, { question: 'Как узнать стоимость проекта?', answer: 'Позвоните нам и расскажите об объекте и необходимых работах.' }]),
-  makeService('planirovka-prostranstva', 'Планировка пространства', 'Сделайте каждую комнату удобнее и продуманнее.', 'Рассмотрим идеи планировки, которые добавят интерьеру свободы, комфорта и функциональности с учётом ваших пожеланий.', ['Расстановка мебели и планировка комнат', 'Удобная организация небольших пространств', 'Планирование перед ремонтом или меблировкой'], ['Рациональное использование площади', 'Планировка с учётом вашего распорядка', 'Понятная основа для следующих этапов'], '/images/home-gallery/project-03.jpg', [{ question: 'Поможете спланировать небольшую квартиру?', answer: 'Расскажите о площади и планировке — обсудим ваши задачи.' }, { question: 'Стоит ли продумать планировку до ремонта?', answer: 'Планировка заранее поможет определить, каким вы хотите видеть пространство до начала работ.' }]),
+  makeService('ac-installation', 'AC Installation', 'Professional air conditioning installation for your home.', 'Prime Cool helps with air conditioner installation and fitting. Call to discuss your unit, location and installation needs.', ['New AC unit installation', 'Replacing an existing unit', 'Planning an AC fitting'], ['Discuss the installation before work begins', 'Careful fitting and setup', 'Available 24 hours for enquiries'], [
+    { question: 'Can I call at any time?', answer: 'Yes. Prime Cool is available 24 hours. Call +973 6636 1864 to discuss an appointment.' },
+    { question: 'Do you install a unit I already purchased?', answer: 'Call and share the unit details and location so the team can discuss your installation request.' },
+  ]),
+  makeService('ac-cleaning', 'AC Cleaning', 'Keep your air conditioner clean and working comfortably.', 'Arrange air conditioning cleaning with Prime Cool. Contact the team to discuss your AC type and cleaning requirements.', ['Routine AC cleaning', 'AC airflow or cleanliness concerns', 'Preparing an AC unit for regular use'], ['Service tailored to the unit and request', 'Clear discussion of the work', 'Available around the clock'], [
+    { question: 'How can I arrange AC cleaning?', answer: 'Call +973 6636 1864 any time to discuss your unit and a suitable visit.' },
+    { question: 'Do you clean home AC units?', answer: 'Contact Prime Cool with details about your unit and location to confirm the service.' },
+  ]),
+  makeService('ac-maintenance', 'AC Maintenance & Repair', 'Get help with air conditioner maintenance and service issues.', 'Prime Cool provides air conditioning maintenance and repair support. Call to describe the issue and arrange a visit.', ['AC not cooling as expected', 'General AC maintenance', 'Unusual AC operation'], ['Discuss the issue before a visit', 'On-site service coordination', '24-hour availability'], [
+    { question: 'My AC is not cooling. What should I do?', answer: 'Call Prime Cool at +973 6636 1864 and describe the issue to discuss service.' },
+    { question: 'Is service available outside normal hours?', answer: 'Prime Cool is available 24 hours. Call to arrange a suitable visit.' },
+  ]),
+  makeService('home-appliance-services', 'Home Appliance Services', 'Practical service support for home appliances.', 'Contact Prime Cool about installation, cleaning or maintenance for household appliances. Share the appliance type and issue when you call.', ['Home appliance installation', 'Appliance cleaning and maintenance', 'Help with an appliance issue'], ['Service discussion by phone', 'Work agreed with you before proceeding', 'Available 24 hours'], [
+    { question: 'Which appliances can you help with?', answer: 'Call and describe the appliance and service you need so the team can advise on availability.' },
+    { question: 'How do I book a visit?', answer: 'Call +973 6636 1864 at any time to discuss your appliance and arrange a visit.' },
+  ]),
 ];
 
 export interface EmergencyCondition { id: string; title: string; urgency: 'Immediate (0–2 hours)' | 'Same-Day (2–6 hours)' | 'Urgent (Within 24 hours)'; symptoms: string[]; immediateAction: string[]; clinicTreatment: string }

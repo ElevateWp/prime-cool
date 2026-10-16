@@ -10,17 +10,18 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   title: {
-    default: 'Remont Interior Astana',
+    default: 'Prime Cool | AC & Home Appliance Services in Bahrain',
     template: '%s',
   },
     description:
-    'Remont Interior Astana предлагает дизайн интерьеров, планировку пространства и ремонт в Астане, Казахстан. Телефон: +7 778 214 2175.',
+    'Prime Cool provides AC installation, cleaning, maintenance and home appliance services in Bahrain. Call +973 6636 1864. Open 24 hours.',
   keywords: [
-    'Remont Interior Astana',
-    'дизайн интерьеров Астана',
-    'ремонт интерьера Казахстан',
+    'Prime Cool',
+    'AC installation Bahrain',
+    'air conditioner cleaning Bahrain',
+    'home appliance service Bahrain',
   ],
-  authors: [{ name: 'Remont Interior Astana' }],
+  authors: [{ name: 'Prime Cool' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -37,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,11 +47,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F5F7] selection:text-[#1C1C22]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F1F8FC] selection:text-[#17354A]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Перейти к основному содержимому
+          Skip to main content
         </a>
         <LenisProvider>
           <Navbar />

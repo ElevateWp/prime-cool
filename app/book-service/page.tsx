@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Обсудить дизайн-проект интерьера',
+  title: 'Book a Home Service',
   description:
-    'Свяжитесь с Remont Interior Astana, чтобы обсудить дизайн интерьера, планировку или ремонт в Астане, Казахстан.',
-  pathname: '/obsudit-proekt/',
+    'Contact Prime Cool to discuss AC or home appliance services in Bahrain.',
+  pathname: '/book-service/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Заполните форму',
-    description: 'Расскажите об объекте, планах по дизайну и удобных сроках.',
+    title: 'Tell us what you need',
+    description: 'Tell us about your AC or appliance and preferred appointment time.',
   },
   {
     step: 2,
-    title: 'Откроется WhatsApp',
-    description: 'Проверьте данные заявки перед отправкой в студию.',
+    title: 'Send your enquiry',
+    description: 'Review your enquiry details before sending them to Prime Cool.',
   },
   {
     step: 3,
-    title: 'Нажмите «Отправить»',
-    description: 'Мы свяжемся с вами по указанным контактам, чтобы обсудить проект.',
+    title: 'Submit your request',
+    description: 'Prime Cool will contact you to discuss the requested service.',
   },
   {
     step: 4,
-    title: 'Планирование проекта',
-    description: 'Обсудим объём дизайна, материалы и следующие шаги для вашего интерьера.',
+    title: 'Arrange the service',
+    description: 'Discuss the requested service and agree the next steps.',
   },
 ];
 
@@ -44,17 +44,17 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Обсудить проект', path: '/obsudit-proekt/' }]} />
+          <Breadcrumbs items={[{ name: 'Book a service', path: '/book-service/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Дизайн интерьеров и ремонт
+                  Air conditioning and home appliance services
                 </span>
-                <WordRevealH1 text="Обсудим ваш интерьерный проект." />
+                <WordRevealH1 text="Tell us what service you need." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Расскажите о своём пространстве, целях дизайна и удобных сроках. Эти сведения помогут нам понять ваш проект." />
+                  <ScrubbedParagraph text="Tell us about the AC or appliance, the issue and your preferred time." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,9 +62,9 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Позвоните в студию:</span>
+                  <span className="font-medium text-forest block">Call Prime Cool:</span>
                   <p className="text-forest-ink/70">
-                    Хотите поговорить лично? Звоните в любое время.
+                    Want to speak to the team? Call any time.
                   </p>
                   <a
                     href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -88,13 +88,13 @@ export default function BookAppointmentPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Как это работает
+                    How it works
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                    Что будет дальше
+                    What happens next
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    Мы изучим ваши планы и понятно объясним дальнейшие шаги.
+                    We will discuss your needs and explain the next steps.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -138,17 +138,17 @@ export default function BookAppointmentPage() {
             {/* Contact Options */}
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Контакты</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Связаться со студией</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contact</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Contact Prime Cool</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
-                    <span className="text-forest-ink/60 block">Телефон:</span>
+                    <span className="text-forest-ink/60 block">Phone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                   <div>
-                    <span className="text-forest-ink/60 block">Телефон:</span>
+                    <span className="text-forest-ink/60 block">Phone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
@@ -160,15 +160,15 @@ export default function BookAppointmentPage() {
             {/* Opening Hours */}
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">График</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Часы работы</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Availability</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Opening hours</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
                       <span>{item.day}</span>
                       <span className="tabular-nums">{item.hours}</span>
                     </div>
-                  )) : <p>Позвоните, чтобы уточнить часы работы.</p>}
+                  )) : <p>Call us to confirm availability.</p>}
                 </div>
               </div>
             </AnimateOnScroll>
@@ -176,10 +176,10 @@ export default function BookAppointmentPage() {
             {/* Service Area */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Адрес</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Район обслуживания</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Service area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  Свяжитесь с нами, чтобы уточнить возможность работы с вашим объектом и районом.
+                  Call to confirm availability in your area.
                 </p>
               </div>
             </AnimateOnScroll>

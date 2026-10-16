@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Интерьеры с продуманным дизайном.';
+  const headline = 'Comfort at home, around the clock.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -112,7 +112,7 @@ export default function HomeHero() {
     >
       <Image
         src="/images/home-gallery/project-05.jpg"
-        alt="Современный дизайн интерьера в Астане"
+        alt="Prime Cool home services in Bahrain"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#A90F2D]" />
-              <span className="font-body text-[11px] text-[#73737D] uppercase tracking-[0.14em]">
-                Дизайн интерьеров и ремонт в Астане
+              <span aria-hidden="true" className="h-px w-8 bg-[#087DB8]" />
+              <span className="font-body text-[11px] text-[#667D8C] uppercase tracking-[0.14em]">
+                AC & home appliance services in Bahrain
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#1C1C22] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#17354A] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['продуманным', 'дизайном.'].includes(word) ? 'text-[#A90F2D]' : ''}`}
+                      className={`inline-block will-change-transform ${['home', 'services.'].includes(word) ? 'text-[#087DB8]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,15 +162,15 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-                Продуманный дизайн жилых и коммерческих интерьеров, планировка и ремонт с учётом вашего образа жизни и работы.
+                AC installation, cleaning and maintenance, plus home appliance services across Bahrain.
             </p>
 
             <div
               ref={actionsRef}
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
-              <Button href="/obsudit-proekt/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Обсудить проект
+              <Button href="/book-service/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
+                Book a service
               </Button>
               <Button
                 href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -178,17 +178,17 @@ export default function HomeHero() {
                 size="lg"
                 className="w-full sm:w-auto font-medium"
               >
-                Позвонить: {CLINIC_INFO.contact.phone}
+                Call: {CLINIC_INFO.contact.phone}
               </Button>
             </div>
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#1C1C22]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#17354A]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#1C1C22]">Астана, Казахстан</span>
+              <span className="font-medium text-[#17354A]">Bahrain</span>
               <span className="hidden sm:inline">•</span>
-              <span>Студия дизайна интерьеров</span>
+              <span>AC & home appliance services</span>
               <span className="hidden sm:inline">•</span>
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F5F5F7] border border-[#E2DDE0] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#1C1C22] uppercase tracking-wider font-semibold">
-                Remont Interior Astana
+            <div className="p-6 sm:p-8 bg-[#F1F8FC] border border-[#D5E5ED] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#17354A] uppercase tracking-wider font-semibold">
+                Prime Cool
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#1C1C22]/90 leading-relaxed">
-                <strong className="text-[#1C1C22] font-semibold">Интерьеры, продуманные для вашей жизни.</strong> — дизайн и ремонт в Астане.
+              <p className="font-body text-13 sm:text-15 text-[#17354A]/90 leading-relaxed">
+                <strong className="text-[#17354A] font-semibold">Care for your home, any time.</strong> AC installation, cleaning and appliance service.
               </p>
-              <div className="pt-3 border-t border-[#E2DDE0] flex items-center justify-between text-13 font-body text-[#1C1C22]/70">
-                <span>Открыто круглосуточно</span>
-                <span className="text-[#1C1C22] font-semibold">+7 778 214 2175</span>
+              <div className="pt-3 border-t border-[#D5E5ED] flex items-center justify-between text-13 font-body text-[#17354A]/70">
+                <span>Open 24 hours</span>
+                <span className="text-[#17354A] font-semibold">{CLINIC_INFO.contact.phone}</span>
               </div>
             </div>
           </div>

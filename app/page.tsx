@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Дизайн интерьеров и ремонт в Астане',
+  title: 'AC & Home Appliance Services in Bahrain',
   description:
-    'Remont Interior Astana предлагает дизайн жилых и коммерческих интерьеров, планировку пространства и ремонт. Телефон: +7 778 214 2175.',
+    'Prime Cool provides AC installation, cleaning, maintenance and home appliance services across Bahrain. Call +973 6636 1864. Open 24 hours.',
   pathname: '/',
 });
 
@@ -47,7 +47,7 @@ export default function HomePage() {
       {/* SECTION 3: Interior Design Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Услуги по дизайну интерьеров"
+        title="Air Conditioning & Home Appliance Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,7 +55,7 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose Remont Interior Astana */}
+      {/* SECTION 4: Why Choose Prime Cool */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
