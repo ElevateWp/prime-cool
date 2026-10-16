@@ -8,25 +8,25 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://firstchoiceclean.com.au'),
+  metadataBase: new URL('http://localhost:3000'),
   title: {
-    default: 'FirstChoice Cleaning',
+    default: 'Remont Interior Astana',
     template: '%s',
   },
-  description:
-    'FirstChoice Cleaning provides regular, deep and one-off house cleaning and outdoor pressure washing. Call +61 480 701 505.',
+    description:
+    'Remont Interior Astana предлагает дизайн интерьеров, планировку пространства и ремонт в Астане, Казахстан. Телефон: +7 778 214 2175.',
   keywords: [
-    'FirstChoice Cleaning',
-    'house cleaning',
-    'pressure washing',
+    'Remont Interior Astana',
+    'дизайн интерьеров Астана',
+    'ремонт интерьера Казахстан',
   ],
-  authors: [{ name: 'FirstChoice Cleaning' }],
+  authors: [{ name: 'Remont Interior Astana' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: [{ url: '/favicon.png', type: 'image/png' }],
+    shortcut: [{ url: '/icon.png', type: 'image/png' }],
     apple: [{ url: '/icon.png', sizes: '180x180', type: 'image/png' }],
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-AU" className="scroll-smooth">
+    <html lang="ru" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,11 +46,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F3F8FD] selection:text-[#183454]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F5F7] selection:text-[#1C1C22]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Skip to main content
+          Перейти к основному содержимому
         </a>
         <LenisProvider>
           <Navbar />

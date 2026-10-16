@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <footer className="w-full bg-forest text-paper border-t border-mist/20 pt-16 md:pt-24 pb-12">
       <div className="max-w-site mx-auto px-6 md:px-12">
-        {/* Top section: company summary and project enquiry contact */}
+        {/* Top section: company summary and project enquiry contacts */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-mist/20">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-5">
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="FirstChoice Cleaning logo"
+                  alt="Логотип Remont Interior Astana"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,28 +22,28 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  FirstChoice Cleaning
+                  Remont Interior Astana
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Home & exterior cleaning
+                  Дизайн интерьеров и ремонт · Астана
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Regular, deep and one-off cleaning, plus pressure washing for outdoor concrete.
+              Дизайн интерьеров, планировка пространства и ремонт жилых и коммерческих помещений.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+61 480 701 505</span>
+              <span>+7 778 214 2175</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                FirstChoice Cleaning
+                Remont Interior Astana
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Looking for a thorough, reliable clean? Contact Izzy and Bill to discuss your space.
+                Планируете интерьерный проект? Свяжитесь с нами, чтобы обсудить пространство и ваши пожелания.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -52,13 +52,13 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
                 >
-                  Call: {CLINIC_INFO.contact.phone}
+                  Позвонить: {CLINIC_INFO.contact.phone}
                 </a>
                 <Link
-                  href="/request-a-quote/"
+                  href="/obsudit-proekt/"
                   className="font-body text-13 text-paper/80 underline underline-offset-4 hover:text-paper"
                 >
-                  Request a Quote
+                  Обсудить проект
                 </Link>
               </div>
             </div>
@@ -67,10 +67,10 @@ export default function Footer() {
 
         {/* Middle Section: Complete Internal Linking Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16 border-b border-mist/20">
-          {/* Column 1: technical Treatments */}
+          {/* Column 1: Interior Services */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Services
+              Услуги
             </span>
             <ul className="space-y-2.5 font-body text-15">
               {SERVICES.map((s) => (
@@ -86,21 +86,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: technical Team */}
+          {/* Column 2: Our Studio */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Our Team
+              Наша студия
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
-                <Link href="/our-team/" className="text-paper/80 hover:text-lime transition-colors">
-                  Meet Izzy & Bill
+                <Link href="/nasha-studiya/" className="text-paper/80 hover:text-lime transition-colors">
+                  Remont Interior Astana
                 </Link>
               </li>
               {DENTISTS.map((d) => (
                 <li key={d.slug}>
                   <Link
-                    href={`/our-team/${d.slug}/`}
+                    href={`/nasha-studiya/${d.slug}/`}
                     className="text-paper/80 hover:text-lime transition-colors"
                   >
                     {d.name}
@@ -113,34 +113,32 @@ export default function Footer() {
           {/* Column 3: The company */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Company
+              О компании
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
-                <Link href="/about/" className="text-paper/80 hover:text-lime transition-colors">
-                  About Us
+                <Link href="/studiya/" className="text-paper/80 hover:text-lime transition-colors">
+                  О студии
                 </Link>
               </li>
               <li>
-                <Link href="/testimonials/" className="text-paper/80 hover:text-lime transition-colors">
-                  Testimonials
+                <Link href="/portfolio/" className="text-paper/80 hover:text-lime transition-colors">
+                  Портфолио
                 </Link>
               </li>
               <li>
-              </li>
-              <li>
-                <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
-                  Request a Quote
+                <Link href="/obsudit-proekt/" className="text-paper/80 hover:text-lime transition-colors">
+                  Обсудить проект
                 </Link>
               </li>
               <li>
-                <Link href="/contact/" className="text-paper/80 hover:text-lime transition-colors">
-                  Contact
+                <Link href="/kontakty/" className="text-paper/80 hover:text-lime transition-colors">
+                  Контакты
                 </Link>
               </li>
               <li>
-                <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
-                  Request a Cleaning Quote
+                <Link href="/obsudit-proekt/" className="text-paper/80 hover:text-lime transition-colors">
+                  Заявка на интерьерный проект
                 </Link>
               </li>
             </ul>
@@ -149,11 +147,11 @@ export default function Footer() {
           {/* Column 4: Contact Info */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Contact Details
+              Контактные данные
             </span>
             <div className="space-y-3 font-body text-15 text-paper/80">
               <div>
-                <span className="text-paper/50 block text-13">Phone:</span>
+                <span className="text-paper/50 block text-13">Телефон:</span>
                 <a
                   href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                   target="_blank"
@@ -164,16 +162,16 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <span className="text-paper/50 block text-13">Service area:</span>
+                <span className="text-paper/50 block text-13">Адрес:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
-                  Contact us to check availability for your property and local service area.
+                  {CLINIC_INFO.primaryLocation.directions}
                 </address>
               </div>
               {CLINIC_INFO.contact.website && (
                 <div>
-                  <span className="text-paper/50 block text-13">Website:</span>
+                  <span className="text-paper/50 block text-13">Сайт:</span>
                   <a href={CLINIC_INFO.contact.website} className="hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
-                    firstchoiceclean.com.au
+                    Remont Interior Astana
                   </a>
                 </div>
               )}
@@ -184,11 +182,11 @@ export default function Footer() {
         {/* Bottom Section: Legal & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body text-13 text-paper/60">
           <div>
-            © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
+            © {new Date().getFullYear()} {CLINIC_INFO.legalName}. Все права защищены.
           </div>
           <div className="flex items-center gap-6">
-            <span>Open · Closes 6 PM</span>
-            <span>FirstChoice Cleaning</span>
+            <span>Открыто круглосуточно</span>
+            <span>Remont Interior Astana</span>
           </div>
         </div>
       </div>

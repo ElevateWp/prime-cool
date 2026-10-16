@@ -12,9 +12,16 @@ if (typeof window !== 'undefined') {
 interface ScrubbedParagraphProps {
   text: string;
   className?: string;
+  size?: 'lead' | 'body' | 'small';
 }
 
-export default function ScrubbedParagraph({ text, className = '' }: ScrubbedParagraphProps) {
+const SIZE_CLASSES = {
+  lead: 'text-17 md:text-21 text-forest-ink',
+  body: 'text-15 md:text-17 text-forest-ink/80',
+  small: 'text-13 text-forest-light',
+};
+
+export default function ScrubbedParagraph({ text, className = '', size = 'lead' }: ScrubbedParagraphProps) {
   const containerRef = useRef<HTMLParagraphElement>(null);
   const wordsRef = useRef<HTMLSpanElement[]>([]);
 
@@ -50,7 +57,7 @@ export default function ScrubbedParagraph({ text, className = '' }: ScrubbedPara
   return (
     <p
       ref={containerRef}
-      className={`font-body text-17 md:text-21 text-forest-ink leading-[1.6] max-w-[68ch] ${className}`}
+      className={`font-body ${SIZE_CLASSES[size]} leading-[1.6] max-w-[68ch] ${className}`}
     >
       {words.map((word, idx) => (
         <span

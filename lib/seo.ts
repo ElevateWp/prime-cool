@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://firstchoiceclean.com.au';
+export const BASE_URL = 'http://localhost:3000';
 
 export function createMetadata({
   title,
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_AU',
+      locale: 'ru_KZ',
       type: 'website',
       images: [
         {
@@ -115,7 +115,7 @@ export function generateMedicalProcedureSchema(serviceName: string, description:
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Residential cleaning and pressure washing',
+    serviceType: 'Дизайн интерьеров и ремонт',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

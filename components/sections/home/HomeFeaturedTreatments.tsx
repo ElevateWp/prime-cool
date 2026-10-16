@@ -2,17 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
+import ScrubbedParagraph from '@/components/motion/ScrubbedParagraph';
 
 export default function HomeFeaturedTreatments() {
   return (
     <section className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#183454] block mb-2 font-medium uppercase tracking-wider">
-            Our cleaning services
+          <span className="font-body text-13 text-[#1C1C22] block mb-2 font-medium uppercase tracking-wider">
+            Услуги по дизайну интерьера
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#183454]">
-            Cleaning shaped around your space
+          <h2 className="font-display text-33 md:text-41 text-[#1C1C22]">
+            Дизайн с учётом особенностей вашего пространства
           </h2>
         </AnimateOnScroll>
 
@@ -20,30 +21,28 @@ export default function HomeFeaturedTreatments() {
           {/* Featured work: residential improvements */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6 order-2 lg:order-1">
-              <span className="font-body text-13 text-[#183454] uppercase tracking-wider block mb-2 font-medium">
-                Regular and deep cleaning
+              <span className="font-body text-13 text-[#1C1C22] uppercase tracking-wider block mb-2 font-medium">
+                Дизайн жилых интерьеров
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#183454] mb-4">
-                A fresh, comfortable home
+              <h3 className="font-display text-26 md:text-33 text-[#1C1C22] mb-4">
+                Продуманный и уютный дом
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#183454]/80 leading-relaxed mb-6">
-                From regular upkeep to a thorough deep clean, we discuss your priorities and focus on the areas that matter to you.
-              </p>
-              <div className="p-4 bg-[#F3F8FD] border-l-4 border-[#183454] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#183454]/80">
-                <strong className="text-[#183454] font-semibold">Our approach:</strong> Friendly communication and careful attention to detail.
+              <ScrubbedParagraph text="Продумайте интерьер дома с учётом вашего распорядка, стиля и назначения каждой комнаты." size="body" className="mb-6" />
+              <div className="p-4 bg-[#F5F5F7] border-l-4 border-[#1C1C22] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#1C1C22]/80">
+                <strong className="text-[#1C1C22] font-semibold">Наш подход:</strong> Продуманные планировки и тщательно подобранные детали отделки.
                 </span>
               </div>
-              <Button href="/regular-house-cleaning/" variant="ghost" size="md">
-                Explore regular cleaning
+              <Button href="/dizayn-zhilykh-intererov/" variant="ghost" size="md">
+                Смотреть дизайн жилых интерьеров
               </Button>
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6 order-1 lg:order-2">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/cleaning-home.jpg"
-                  alt="A freshly cleaned home"
+                  src="/images/home-gallery/project-01.jpg"
+                  alt="Идеи дизайна жилого интерьера"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-top"
@@ -57,8 +56,8 @@ export default function HomeFeaturedTreatments() {
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/pressure-washing.jpg"
-                  alt="Outdoor pressure washing"
+                  src="/images/home-gallery/project-04.jpg"
+                  alt="Идеи ремонта интерьера и отделки"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -67,22 +66,20 @@ export default function HomeFeaturedTreatments() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6">
-              <span className="font-body text-13 text-[#183454] uppercase tracking-wider block mb-2 font-medium">
-                One-off cleaning and pressure washing
+              <span className="font-body text-13 text-[#1C1C22] uppercase tracking-wider block mb-2 font-medium">
+                Ремонт интерьера и планировка пространства
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#183454] mb-4">
-                A one-off clean when you need it
+              <h3 className="font-display text-26 md:text-33 text-[#1C1C22] mb-4">
+                Планируйте ремонт с ясным пониманием
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#183454]/80 leading-relaxed mb-6">
-                Book a standalone home clean or ask us about pressure washing outdoor concrete. We will agree the details with you first.
-              </p>
-              <div className="p-4 bg-[#F3F8FD] border-l-4 border-[#183454] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#183454]/80">
-                  <strong className="text-[#183454] font-semibold">A straightforward service:</strong> Competitive prices and reliable care from start to finish.
+              <ScrubbedParagraph text="Обсудите концепцию дизайна, материалы и объём проекта до начала ремонтных работ." size="body" className="mb-6" />
+              <div className="p-4 bg-[#F5F5F7] border-l-4 border-[#1C1C22] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#1C1C22]/80">
+                  <strong className="text-[#1C1C22] font-semibold">Понятный процесс:</strong> Обсудим детали и сроки до утверждения проекта.
                 </span>
               </div>
-              <Button href="/one-off-cleaning/" variant="ghost" size="md">
-                Explore one-off cleaning
+              <Button href="/remont-interera/" variant="ghost" size="md">
+                Смотреть услуги по ремонту интерьера
               </Button>
             </AnimateOnScroll>
           </div>

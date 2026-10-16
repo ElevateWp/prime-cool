@@ -4,15 +4,16 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import Button from '@/components/ui/Button';
 import WordRevealH1 from '@/components/motion/WordRevealH1';
+import ScrubbedParagraph from '@/components/motion/ScrubbedParagraph';
 import TextureBackground from '@/components/layout/TextureBackground';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contact and Service Area',
+  title: 'Контакты и район обслуживания',
   description:
-    'Contact FirstChoice Cleaning to arrange regular, deep or one-off home cleaning, or pressure washing for outdoor concrete.',
-  pathname: '/contact/',
+    'Свяжитесь с Remont Interior Astana, чтобы обсудить дизайн интерьера, планировку и ремонт в Астане, Казахстан.',
+  pathname: '/kontakty/',
 });
 
 export default function ContactPage() {
@@ -23,18 +24,16 @@ export default function ContactPage() {
         <TextureBackground variant="Contato" className="opacity-30" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Contact', path: '/contact/' }]} />
+          <Breadcrumbs items={[{ name: 'Контакты', path: '/kontakty/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Contact & Quotes
+                  Контакты и стоимость проекта
                 </span>
-                <WordRevealH1 text="Talk to Izzy & Bill." />
-                <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Call Izzy and Bill to discuss the cleaning service you need, check availability and request a quote.
-                </p>
+                <WordRevealH1 text="Обсудим ваш интерьерный проект." />
+                <ScrubbedParagraph text="Позвоните в Remont Interior Astana, чтобы обсудить пространство, дизайн-план и ремонт." className="mt-6 max-w-2xl" />
               </AnimateOnScroll>
             </div>
           </div>
@@ -50,18 +49,18 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Get in Touch
+                    Свяжитесь с нами
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                    Contact Us
+                    Контакты
                   </h2>
-                  <Button href="/request-a-quote/" variant="forest" size="md" className="mb-5">Request a cleaning quote</Button>
+                  <Button href="/obsudit-proekt/" variant="forest" size="md" className="mb-5">Обсудить проект</Button>
 
                   <div className="divide-y divide-mist border-t border-b border-mist">
                     {/* Call */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-mist/30 px-4 -mx-4 rounded-sm">
                       <div>
-                        <span className="font-body text-13 text-forest font-semibold block">Call our team</span>
+                        <span className="font-body text-13 text-forest font-semibold block">Позвонить в студию</span>
                         <a
                           href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           target="_blank"
@@ -71,13 +70,13 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Cleaning enquiries</span>
+                      <span className="font-body text-13 text-forest font-medium">Вопросы по дизайну интерьера</span>
                     </div>
 
                     {/* Phone */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Phone</span>
+                      <span className="font-body text-13 text-forest-ink/60 block">Телефон</span>
                         <a
                           href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           className="font-display text-21 text-forest hover:underline"
@@ -85,14 +84,12 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Call to confirm opening hours</span>
+                      <span className="font-body text-13 text-forest-ink/60">Открыто круглосуточно</span>
                     </div>
 
                     <div className="py-5">
-                      <span className="font-body text-13 text-forest-ink/60 block">Website</span>
-                      <a href={CLINIC_INFO.contact.website} className="font-display text-21 text-forest hover:underline" target="_blank" rel="noopener noreferrer">
-                        firstchoiceclean.com.au
-                      </a>
+                      <span className="font-body text-13 text-forest-ink/60 block">Часы работы</span>
+                      <span className="font-display text-21 text-forest">Открыто круглосуточно</span>
                     </div>
 
                   </div>
@@ -103,7 +100,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Service Area
+                    Адрес
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
                     {CLINIC_INFO.name}
@@ -112,7 +109,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.primaryLocation.directions}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Website:</strong> firstchoiceclean.com.au · Phone: {CLINIC_INFO.contact.phone}
+                    <strong>Адрес:</strong> Астана, Казахстан · Телефон: {CLINIC_INFO.contact.phone}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -123,7 +120,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Opening Hours
+                    Часы работы
                   </span>
                   <div className="border border-mist divide-y divide-mist bg-paper font-body text-13 shadow-sm">
                     {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
@@ -131,7 +128,7 @@ export default function ContactPage() {
                         <span className="font-medium text-forest-ink">{item.day}</span>
                         <span className="tabular-nums text-forest-ink/80">{item.hours}</span>
                       </div>
-                    )) : <p className="p-3.5 text-forest-ink/80">Please call to confirm current availability.</p>}
+                    )) : <p className="p-3.5 text-forest-ink/80">Позвоните, чтобы уточнить доступность.</p>}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -141,7 +138,7 @@ export default function ContactPage() {
                 <div className="p-8 bg-forest text-paper flex flex-col justify-between aspect-[16/10] shadow-sm">
                   <div>
                     <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-                      Service Area
+                      Район обслуживания
                     </span>
                     <h3 className="font-display text-26 text-paper mb-2">
                       {CLINIC_INFO.name}
@@ -157,7 +154,7 @@ export default function ContactPage() {
                       variant="lime"
                       size="sm"
                     >
-                      Call our team
+                      Позвонить в студию
                     </Button>
                     <a
                       href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -165,7 +162,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"
                     >
-                      Call: {CLINIC_INFO.contact.phone}
+                      Позвонить: {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                 </div>
@@ -181,16 +178,16 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Cleaning Quote
+                Заявка на интерьерный проект
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Ready to request a quote?
+                Хотите обсудить стоимость проекта?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/request-a-quote/" variant="lime" size="lg">
-              Request a Quote Online
+            <Button href="/obsudit-proekt/" variant="lime" size="lg">
+              Оставить заявку онлайн
             </Button>
           </AnimateOnScroll>
         </div>

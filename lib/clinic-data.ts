@@ -24,49 +24,53 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: 'FirstChoice Cleaning', legalName: 'FirstChoice Cleaning', tagline: 'A cleaner space, with care you can count on.',
-  primaryLocation: { street: '', suite: '', city: '', state: '', postalCode: '', country: 'Australia', directions: 'Contact us to check our local service area.', landmarks: '' },
-  contact: { phone: '+61 480 701 505', emergencyPhone: '+61 480 701 505', whatsapp: '+61 480 701 505', website: 'https://firstchoiceclean.com.au', email: '' },
-  identityHighlights: ['5.0 Google rating · 12 reviews', 'Friendly, professional and reliable service'],
-  schedule: [{ day: 'Availability', hours: 'Open · Closes 6 PM' }],
-  verifiedStats: [{ value: 5, suffix: '.0', label: 'Google rating', description: 'From 12 customer reviews' }, { value: 12, suffix: '', label: 'Google reviews', description: 'Customer feedback on Google' }],
+  name: 'Remont Interior Astana', legalName: 'Remont Interior Astana', tagline: 'Интерьеры, продуманные для вашей жизни.',
+  primaryLocation: { street: '', suite: '', city: 'Астана', state: 'Акмолинская область', postalCode: '010000', country: 'Казахстан', directions: 'Казахстан, Акмолинская область, Астана, 010000', landmarks: '' },
+  contact: { phone: '+7 778 214 2175', emergencyPhone: '+7 778 214 2175', whatsapp: '+7 778 214 2175', website: '', email: '' },
+  identityHighlights: ['Дизайн интерьеров в Астане', 'Открыто круглосуточно'],
+  schedule: [{ day: 'Ежедневно', hours: 'Круглосуточно' }],
+  verifiedStats: [
+    { value: 24, suffix: 'ч', label: 'Открыто', description: 'Круглосуточно' },
+    { value: 4, suffix: '', label: 'Услуги по интерьеру', description: 'Дизайн, ремонт и планировка пространства' },
+    { value: 1, suffix: '', label: 'Студия в Астане', description: 'Астана, Казахстан' },
+  ],
   accreditations: [],
 };
 
 export const DENTISTS: DentistProfile[] = [{
-  id: 'firstchoice-cleaning-team', slug: 'izzy-and-bill', name: 'Izzy & Bill', title: 'Founders of FirstChoice Cleaning',
-  qualifications: 'Cleaning team', specialization: 'Home and exterior cleaning', experienceYears: 0,
-  bio: 'Izzy and Bill founded FirstChoice Cleaning with a simple idea: provide a cleaning service that puts people first. They bring a personal touch, attention to detail and genuine care to every space they clean.',
-  philosophy: 'Treat every home and business as if it were our own, and go the extra mile with reliable, thoughtful service.',
-  education: [], memberships: [], specialties: ['Regular cleaning', 'Deep cleaning', 'One-off cleaning', 'Pressure washing'],
-  image: '/images/izzy-and-bill.png', warmImage: '/images/izzy-and-bill.png',
+  id: 'remont-interer-astana', slug: 'remont-interer-astana', name: 'Remont Interior Astana', title: 'Студия дизайна интерьеров',
+  qualifications: 'Дизайн интерьеров · Астана, Казахстан', specialization: 'Жилые и коммерческие интерьеры', experienceYears: 0,
+  bio: 'Remont Interior Astana занимается жилыми и коммерческими пространствами: мы предлагаем дизайн интерьеров, планировку пространства и ремонт.',
+  philosophy: 'Продуманные планировки, тщательно подобранные материалы и детали для каждого пространства.',
+  education: [], memberships: [], specialties: ['Дизайн интерьеров', 'Планировка пространства', 'Ремонт интерьера', 'Отделка интерьера'],
+  image: '/images/home-gallery/project-08.jpg', warmImage: '/images/home-gallery/project-08.jpg',
 }];
 
 const makeService = (slug: string, name: string, tagline: string, description: string, needs: string[], benefits: string[], image: string, faqs: { question: string; answer: string }[]): ServiceDetail => ({
   slug, name, navLabel: name, tagline, shortDescription: description, clinicalExplanation: description,
   whoNeeds: needs, benefits,
-  indications: needs.map((condition) => ({ condition, explanation: `Tell us about your space and what you would like cleaned, and we can discuss a suitable service for ${condition.toLowerCase()}.` })),
+  indications: needs.map((condition) => ({ condition, explanation: `Расскажите о своём пространстве и приоритетах, чтобы мы могли предложить подход к дизайну для раздела «${condition.toLowerCase()}».` })),
   procedureSteps: [
-    { stepNumber: 1, title: 'Tell us what you need', duration: 'Quick enquiry', description: 'Share the type of clean, your space and any priorities.', clinicalDetails: 'We listen to understand the property and the result you are looking for.' },
-    { stepNumber: 2, title: 'Agree the details', duration: 'Before booking', description: 'We discuss the work, timing and price with you before confirming.', clinicalDetails: 'The scope is explained clearly so you know what to expect.' },
-    { stepNumber: 3, title: 'We clean with care', duration: 'As arranged', description: 'Izzy and Bill provide a thorough, careful service at your property.', clinicalDetails: 'We work with attention to detail and respect for your space.' },
-    { stepNumber: 4, title: 'Enjoy a fresh space', duration: 'After the clean', description: 'We leave your space clean and tidy once the agreed job is complete.', clinicalDetails: 'We want you to feel happy with the finished result.' },
+    { stepNumber: 1, title: 'Расскажите о своих идеях', duration: 'Первый разговор', description: 'Расскажите о пространстве, стиле и целях.', clinicalDetails: 'Сначала мы узнаём, что важно именно для вас.' },
+    { stepNumber: 2, title: 'Продумайте детали', duration: 'Планирование дизайна', description: 'Обсудим планировку, материалы и объём проекта.', clinicalDetails: 'Вместе рассмотрим предполагаемый объём работ.' },
+    { stepNumber: 3, title: 'Согласуйте проект', duration: 'График проекта', description: 'Скоординируем дизайн и согласованные ремонтные работы.', clinicalDetails: 'Вместе согласуем сроки и детали проекта.' },
+    { stepNumber: 4, title: 'Наслаждайтесь пространством', duration: 'Завершение проекта', description: 'Оцените готовый интерьер и последние детали.', clinicalDetails: 'Вместе осмотрим результат согласованных работ.' },
   ],
   recoveryTimeline: [
-    { period: 'Before your clean', expectedSensations: 'A simple conversation about your priorities.', careProtocol: 'Let us know about access, areas of focus and any specific requests.' },
-    { period: 'During the clean', expectedSensations: 'Our team works carefully through the agreed areas.', careProtocol: 'We treat your home or business with respect.' },
-    { period: 'After the clean', expectedSensations: 'A fresh, clean and tidy space.', careProtocol: 'Get in touch if you have a question about the completed service.' },
+    { period: 'Первый разговор', expectedSensations: 'Чёткое обсуждение ваших целей и пространства.', careProtocol: 'Расскажите о предпочтительном стиле, потребностях и ограничениях.' },
+    { period: 'Планирование дизайна', expectedSensations: 'Формируются планировка, подбор материалов и объём работ.', careProtocol: 'Вместе рассмотрите предложенный план и детали.' },
+    { period: 'Завершение проекта', expectedSensations: 'Готовый интерьер, которым можно пользоваться.', careProtocol: 'Проверьте согласованный объём работ и завершающие детали.' },
   ],
-  costTransparency: { baseRange: 'Contact us for a clear, competitive price.', factors: ['Size and condition of the space', 'Type of clean requested', 'Areas and details included'], whatIsIncluded: ['Discussion of your priorities', 'Agreed cleaning scope', 'Careful service from our team'], note: 'We confirm pricing and availability with you before the service is booked.' },
-  beforeAfterCase: { category: name, clinicalContext: 'Representative cleaning imagery. The work is agreed based on your property and requested service.', beforeLabel: 'Cleaning in progress', afterLabel: 'Fresh and tidy space', beforeImage: image, afterImage: image, timeframe: 'Service arranged to suit your needs' },
-  assignedDentistId: 'firstchoice-cleaning-team', faqs,
+  costTransparency: { baseRange: 'Стоимость проекта обсуждается после оценки пространства и ваших требований.', factors: ['Площадь и текущее состояние объекта', 'Объём дизайн-проекта и выбранные материалы', 'Согласованные работы'], whatIsIncluded: ['Обсуждение проекта', 'Планирование дизайна', 'Согласованные интерьерные работы'], note: 'Свяжитесь с нами, чтобы обсудить детали и стоимость проекта.' },
+  beforeAfterCase: { category: name, clinicalContext: 'Идеи для дизайна и ремонта интерьера.', beforeLabel: 'Деталь интерьера', afterLabel: 'Готовое пространство', beforeImage: image, afterImage: image, timeframe: 'Сроки проекта согласуются с учётом объёма работ' },
+  assignedDentistId: 'remont-interer-astana', faqs,
 });
 
 export const SERVICES: ServiceDetail[] = [
-  makeService('regular-house-cleaning', 'Regular House Cleaning', 'A reliable regular clean to keep your home feeling fresh and comfortable.', 'FirstChoice Cleaning provides thoughtful regular cleaning for homes. We discuss the areas you want us to focus on and arrange a service that fits your needs.', ['Ongoing help keeping your home clean and tidy', 'Routine attention to living areas, bedrooms and kitchen', 'A dependable cleaning team you can get to know'], ['Friendly and professional service', 'Careful attention to detail', 'A clean and tidy home after every visit'], '/images/cleaning-home.jpg', [{ question: 'Can I arrange regular cleaning?', answer: 'Contact Izzy and Bill to discuss your home, preferred frequency and the areas you would like included.' }, { question: 'Will the same team clean my home?', answer: 'FirstChoice Cleaning is a personal service led by founders Izzy and Bill. Please ask about availability when you enquire.' }]),
-  makeService('deep-house-cleaning', 'Deep House Cleaning', 'A thorough clean focused on the details throughout your home.', 'For a more detailed refresh, we take time to understand your priorities and discuss the areas that need extra attention before the clean begins.', ['A detailed clean of your home', 'A seasonal or occasional refresh', 'Extra attention to areas that need it'], ['Discuss priorities before we begin', 'Thorough and careful work', 'Friendly, reliable communication'], '/images/cleaning-detail.jpg', [{ question: 'What does a deep clean include?', answer: 'Every home is different. We discuss the rooms, condition and details you want covered, then agree the scope with you before booking.' }, { question: 'Can I request particular areas?', answer: 'Yes. Tell us which areas matter most when you get in touch so we can discuss the right scope.' }]),
-  makeService('one-off-cleaning', 'One-Off Cleaning', 'A one-off clean for a fresh start, special occasion or whenever you need a hand.', 'Book a standalone clean with a scope shaped around your home and priorities. We make the process straightforward from first enquiry to completion.', ['An occasional home refresh', 'A clean before or after a special occasion', 'A one-time helping hand with household cleaning'], ['Flexible, straightforward enquiry', 'Clear agreement on the work', 'Careful cleaning from start to finish'], '/images/cleaning-kitchen.jpg', [{ question: 'Can I book a single clean?', answer: 'Yes. FirstChoice Cleaning offers one-off cleaning. Contact us to discuss your home, timing and priorities.' }, { question: 'How do I get a price?', answer: 'Call or message us with a few details about your property and the clean you need. We will discuss a competitive price with you.' }]),
-  makeService('pressure-washing', 'Pressure Washing', 'Refresh outdoor concrete with professional pressure washing.', 'FirstChoice Cleaning can pressure wash outdoor concrete. Customers have praised the visible difference and the friendly, professional service from Izzy and Bill.', ['Outdoor concrete that needs a refresh', 'Driveways, paths or other concrete areas to discuss', 'A one-off exterior cleaning job'], ['A visible clean to outdoor concrete', 'Competitive pricing', 'Professional, reliable service'], '/images/pressure-washing.jpg', [{ question: 'Do you pressure wash outdoor concrete?', answer: 'Yes. Customers have shared positive feedback about pressure washing outdoor concrete. Contact us to discuss your surface and the area to be cleaned.' }, { question: 'How much does pressure washing cost?', answer: 'Price depends on the area and job. Contact Izzy and Bill for a competitive quote before booking.' }]),
+  makeService('dizayn-zhilykh-intererov', 'Дизайн жилых интерьеров', 'Комфортные, продуманные интерьеры для вашей повседневной жизни.', 'Создадим гармоничный, практичный и индивидуальный интерьер дома — от первых идей планировки до завершающих деталей.', ['Интерьеры квартир и домов', 'Обновление комнат и дизайн всего дома', 'Удобная планировка и целостная отделка'], ['Дизайн с учётом ваших потребностей', 'Внимание к материалам и деталям', 'Единая концепция интерьера дома'], '/images/home-gallery/project-01.jpg', [{ question: 'Можно оформить только одну комнату?', answer: 'Да. Расскажите о комнате, своих целях и желаемом объёме работ — мы обсудим ваш проект.' }, { question: 'Можно ли выбрать отделочные материалы?', answer: 'Мы обсудим варианты отделки и материалов в рамках дизайн-проекта.' }]),
+  makeService('dizayn-kommercheskikh-intererov', 'Дизайн коммерческих интерьеров', 'Приветливые и функциональные пространства для работы и бизнеса.', 'Спланируем интерьер с учётом того, как им пользуются ваша команда и посетители, уделив внимание планировке, атмосфере и отделке.', ['Интерьеры офисов и студий', 'Пространства для клиентов и гостей', 'Функциональное обновление существующего интерьера'], ['Планировка с учётом назначения пространства', 'Целостная концепция интерьера', 'Отделка, соответствующая задачам проекта'], '/images/home-gallery/project-05.jpg', [{ question: 'Вы занимаетесь коммерческими интерьерами?', answer: 'Свяжитесь с Remont Interior Astana, чтобы обсудить ваше коммерческое пространство и задачи проекта.' }, { question: 'Можно обновить уже готовое пространство?', answer: 'Да. Расскажите, что вас устраивает, что хотелось бы изменить и какой объём работ вы рассматриваете.' }]),
+  makeService('remont-interera', 'Ремонт интерьера', 'Обновите комнаты по чёткому и продуманному плану.', 'Организуем обновление интерьера с учётом ваших целей, уделяя внимание планировке, отделке и практичным деталям.', ['Ремонт комнат и квартир', 'Обновление кухонь и ванных комнат', 'Отделочные работы и обновление интерьера'], ['Чёткое обсуждение объёма проекта', 'Совместный выбор материалов и деталей', 'Планирование с учётом особенностей вашего объекта'], '/images/home-gallery/project-02.jpg', [{ question: 'Можно совместить ремонт с разработкой дизайна?', answer: 'При обсуждении проекта мы можем рассмотреть потребности в дизайне и ремонте вместе.' }, { question: 'Как узнать стоимость проекта?', answer: 'Позвоните нам и расскажите об объекте и необходимых работах.' }]),
+  makeService('planirovka-prostranstva', 'Планировка пространства', 'Сделайте каждую комнату удобнее и продуманнее.', 'Рассмотрим идеи планировки, которые добавят интерьеру свободы, комфорта и функциональности с учётом ваших пожеланий.', ['Расстановка мебели и планировка комнат', 'Удобная организация небольших пространств', 'Планирование перед ремонтом или меблировкой'], ['Рациональное использование площади', 'Планировка с учётом вашего распорядка', 'Понятная основа для следующих этапов'], '/images/home-gallery/project-03.jpg', [{ question: 'Поможете спланировать небольшую квартиру?', answer: 'Расскажите о площади и планировке — обсудим ваши задачи.' }, { question: 'Стоит ли продумать планировку до ремонта?', answer: 'Планировка заранее поможет определить, каким вы хотите видеть пространство до начала работ.' }]),
 ];
 
 export interface EmergencyCondition { id: string; title: string; urgency: 'Immediate (0–2 hours)' | 'Same-Day (2–6 hours)' | 'Urgent (Within 24 hours)'; symptoms: string[]; immediateAction: string[]; clinicTreatment: string }

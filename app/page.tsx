@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Cleaning Services',
+  title: 'Дизайн интерьеров и ремонт в Астане',
   description:
-    'FirstChoice Cleaning offers regular, deep and one-off house cleaning plus pressure washing for outdoor concrete. Call +61 480 701 505.',
+    'Remont Interior Astana предлагает дизайн жилых и коммерческих интерьеров, планировку пространства и ремонт. Телефон: +7 778 214 2175.',
   pathname: '/',
 });
 
@@ -41,13 +41,13 @@ export default function HomePage() {
       {/* SECTION 2: Trust / Highlights */}
       <HomeStats />
 
-      {/* SECTION 2A: Positive Google Reviews */}
+      {/* SECTION 2A: Design approach highlights */}
       <HomeReviews />
 
-      {/* SECTION 3: Cleaning Services */}
+      {/* SECTION 3: Interior Design Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Cleaning Services"
+        title="Услуги по дизайну интерьеров"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,19 +55,19 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose FirstChoice Cleaning */}
+      {/* SECTION 4: Why Choose Remont Interior Astana */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Cleaning Work */}
+      {/* SECTION 6: Featured Interior Services */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Cleaning Inspiration */}
+      {/* SECTION 9: Interior Inspiration */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}
@@ -76,7 +76,7 @@ export default function HomePage() {
       {/* SECTION 11: Service Area and Opening Hours */}
       <HomeLocation />
 
-      {/* SECTION 12: Request a Quote */}
+      {/* SECTION 12: Discuss Your Project */}
       <HomeFinalCTA />
     </div>
   );

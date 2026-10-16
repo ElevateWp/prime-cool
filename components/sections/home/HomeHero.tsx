@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'A cleaner space, with care.';
+  const headline = 'Интерьеры с продуманным дизайном.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -111,8 +111,8 @@ export default function HomeHero() {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <Image
-        src="/images/cleaning-home.jpg"
-        alt="A freshly cleaned home"
+        src="/images/home-gallery/project-05.jpg"
+        alt="Современный дизайн интерьера в Астане"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#F4770B]" />
-              <span className="font-body text-[11px] text-[#687B91] uppercase tracking-[0.14em]">
-                Professional home & exterior cleaning
+              <span aria-hidden="true" className="h-px w-8 bg-[#A90F2D]" />
+              <span className="font-body text-[11px] text-[#73737D] uppercase tracking-[0.14em]">
+                Дизайн интерьеров и ремонт в Астане
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#183454] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#1C1C22] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['space,', 'care.'].includes(word) ? 'text-[#F4770B]' : ''}`}
+                      className={`inline-block will-change-transform ${['продуманным', 'дизайном.'].includes(word) ? 'text-[#A90F2D]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,15 +162,15 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              Regular, deep and one-off home cleaning, plus outdoor pressure washing. Friendly, professional service from founders Izzy and Bill.
+                Продуманный дизайн жилых и коммерческих интерьеров, планировка и ремонт с учётом вашего образа жизни и работы.
             </p>
 
             <div
               ref={actionsRef}
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
-              <Button href="/request-a-quote/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Request a Quote
+              <Button href="/obsudit-proekt/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
+                Обсудить проект
               </Button>
               <Button
                 href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -178,17 +178,17 @@ export default function HomeHero() {
                 size="lg"
                 className="w-full sm:w-auto font-medium"
               >
-                Call {CLINIC_INFO.contact.phone}
+                Позвонить: {CLINIC_INFO.contact.phone}
               </Button>
             </div>
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#183454]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#1C1C22]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#183454]">5.0 Google rating · 12 reviews</span>
+              <span className="font-medium text-[#1C1C22]">Астана, Казахстан</span>
               <span className="hidden sm:inline">•</span>
-              <span>Home and exterior cleaning</span>
+              <span>Студия дизайна интерьеров</span>
               <span className="hidden sm:inline">•</span>
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F3F8FD] border border-[#DCE6F0] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#183454] uppercase tracking-wider font-semibold">
-                FirstChoice Cleaning
+            <div className="p-6 sm:p-8 bg-[#F5F5F7] border border-[#E2DDE0] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#1C1C22] uppercase tracking-wider font-semibold">
+                Remont Interior Astana
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#183454]/90 leading-relaxed">
-                <strong className="text-[#183454] font-semibold">A cleaner space, with care you can count on.</strong> &mdash; personal service from Izzy and Bill.
+              <p className="font-body text-13 sm:text-15 text-[#1C1C22]/90 leading-relaxed">
+                <strong className="text-[#1C1C22] font-semibold">Интерьеры, продуманные для вашей жизни.</strong> — дизайн и ремонт в Астане.
               </p>
-              <div className="pt-3 border-t border-[#DCE6F0] flex items-center justify-between text-13 font-body text-[#183454]/70">
-                <span>Open · Closes 6 PM</span>
-                <span className="text-[#183454] font-semibold">+61 480 701 505</span>
+              <div className="pt-3 border-t border-[#E2DDE0] flex items-center justify-between text-13 font-body text-[#1C1C22]/70">
+                <span>Открыто круглосуточно</span>
+                <span className="text-[#1C1C22] font-semibold">+7 778 214 2175</span>
               </div>
             </div>
           </div>

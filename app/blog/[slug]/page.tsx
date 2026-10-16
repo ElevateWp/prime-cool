@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   if (!post) return {};
 
   return createMetadata({
-    title: `${post.title} | Cleaning Advice`,
+    title: `${post.title} | Советы по дизайну интерьера`,
     description: post.excerpt,
     pathname: `/blog/${post.slug}/`,
     image: post.leadImage,
@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe FirstChoice Cleaning',
+      name: author?.name || 'Команда Remont Interior Astana',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,7 +86,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Cleaning Advice', path: '/blog/' },
+              { name: 'Советы по дизайну интерьера', path: '/blog/' },
               { name: post.category, path: '/blog/' },
               { name: post.title, path: `/blog/${post.slug}/` },
             ]}
@@ -99,9 +99,9 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                 <span>•</span>
                 <span className="tabular-nums">{post.readTime}</span>
                 <span>•</span>
-                <span>Published: {post.publishDate}</span>
+                <span>Опубликовано: {post.publishDate}</span>
                 <span>•</span>
-                <span>Updated: {post.lastUpdated}</span>
+                <span>Обновлено: {post.lastUpdated}</span>
               </div>
 
               <WordRevealH1 text={post.title} className="mb-6" />
@@ -122,7 +122,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                   </div>
                   <div>
                     <Link
-                      href={`/our-team/${author.slug}/`}
+                      href={`/nasha-studiya/${author.slug}/`}
                       className="font-display text-17 text-forest-ink hover:text-forest font-medium block"
                     >
                       {author.name}
@@ -176,7 +176,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <div className="p-8 bg-mist/40 border border-mist my-8 shadow-sm">
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Related Cleaning Service
+                    Связанная услуга по дизайну интерьера
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
                     {relatedService.name}
@@ -188,7 +188,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                     href={`/${relatedService.slug}/`}
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    Explore {relatedService.navLabel} →
+                    Подробнее: {relatedService.navLabel} →
                   </Link>
                 </div>
               </AnimateOnScroll>
@@ -199,7 +199,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <div className="pt-8 border-t border-mist">
                   <h3 className="font-display text-26 text-forest-ink mb-6">
-                    Questions on This Topic
+                    Вопросы по теме
                   </h3>
                   <Accordion items={post.content.faqs} />
                 </div>
@@ -213,7 +213,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
       {relatedTrackItems.length > 0 && (
         <PinnedHorizontalTrack
           items={relatedTrackItems}
-          title="Related Cleaning Advice"
+          title="Другие советы по дизайну интерьера"
         />
       )}
 
@@ -223,16 +223,16 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Cleaning Advice
+                Советы по дизайну интерьера
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Discuss Your Cleaning Plans with Our Team
+                Обсудите свой проект с нашей командой
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/request-a-quote/" variant="lime" size="lg">
-              Request a Quote
+            <Button href="/obsudit-proekt/" variant="lime" size="lg">
+              Обсудить проект
             </Button>
           </AnimateOnScroll>
         </div>

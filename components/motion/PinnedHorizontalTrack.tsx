@@ -28,7 +28,7 @@ interface PinnedHorizontalTrackProps {
 
 export default function PinnedHorizontalTrack({
   items,
-  title = 'Cleaning Services',
+  title = 'Услуги дизайна интерьера',
   className = '',
 }: PinnedHorizontalTrackProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -106,13 +106,13 @@ export default function PinnedHorizontalTrack({
         <div>
           <span className="font-body text-13 text-forest-ink/60 block mb-2">{title}</span>
           <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink leading-tight">
-              Cleaning for Every Part of Your Home
+              Пространства для жизни и работы
           </h2>
         </div>
         <div className="flex items-center gap-4">
           <span className="font-body text-13 tabular-nums text-forest-ink">
             <span className="font-medium text-forest">{currentIndex}</span>
-            <span className="text-forest-ink/40"> of </span>
+            <span className="text-forest-ink/40"> из </span>
             <span>{items.length}</span>
           </span>
           <div className="w-24 sm:w-32 h-[2px] bg-mist relative overflow-hidden hidden sm:block">
@@ -196,7 +196,7 @@ export default function PinnedHorizontalTrack({
                         : 'text-forest hover:text-forest-light'
                     }`}
                   >
-                    <span>Explore Service →</span>
+                    <span>Подробнее об услуге →</span>
                   </Link>
                   <span
                     className={`font-body text-13 tabular-nums ${
@@ -213,12 +213,12 @@ export default function PinnedHorizontalTrack({
       </div>
 
       {/* Mobile swipe hint — only visible on mobile */}
-      <div className="flex lg:hidden justify-center mt-4 gap-1.5 px-6" role="group" aria-label="Choose a service">
+      <div className="flex lg:hidden justify-center mt-4 gap-1.5 px-6" role="group" aria-label="Выбрать услугу">
         {items.map((item, idx) => (
           <button
             key={item.id}
             type="button"
-            aria-label={`Go to slide ${idx + 1}: ${item.title}`}
+            aria-label={`Перейти к карточке ${idx + 1}: ${item.title}`}
             aria-current={idx === currentIndex - 1 ? 'true' : undefined}
             onClick={() => {
               const viewport = scrollContainerRef.current;
@@ -232,7 +232,7 @@ export default function PinnedHorizontalTrack({
               setCurrentIndex(idx + 1);
             }}
             className={`h-3 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest ${
-              idx === currentIndex - 1 ? 'bg-[#183454] w-4' : 'bg-[#DCE6F0] w-3'
+              idx === currentIndex - 1 ? 'bg-[#1C1C22] w-4' : 'bg-[#E2DDE0] w-3'
             }`}
           />
         ))}
